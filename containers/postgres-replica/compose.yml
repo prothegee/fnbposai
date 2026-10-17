@@ -1,32 +1,30 @@
-name: fnbposai-db-pg-service
+name: fnbposai-db-pg-replica-service
 
 services:
-  fnbposai-db-pg:
+  fnbposai-db-pg-replica:
     image: postgres:18
-    container_name: fnbposai-db-pg
+    container_name: fnbposai-db-pg-replica
     environment:
       PGDATA: /var/lib/postgresql/data
+      PRIMARY_HOST: fnbposai-db-pg-primary
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_INITDB_ARGS: ${POSTGRES_INITDB_ARGS}
       POSTGRES_HOST_AUTH_METHOD: ${POSTGRES_HOST_AUTH_METHOD}
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:5433:5432"
     volumes:
-      - ./init:/docker-entrypoint-initdb.d/
-      - fnbposai-db-pg-volume:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
-      interval: 12s
-      timeout: 6s
-      retries: 6
+      - ./replica-entrypoint.sh:/usr/local/bin/replica-entrypoint.sh:ro
+      - fnbposai-db-pg-replica-volume:/var/lib/postgresql/data
+    entrypoint: ["/bin/bash", "/usr/local/bin/replica-entrypoint.sh"]
+    command: ["postgres", "-c", "hot_standby=on"]
     networks:
       - docker0
     restart: never # always | unless-stopped | never
 
 volumes:
-  fnbposai-db-pg-volume:
+  fnbposai-db-pg-replica-volume:
 
 networks:
   docker0:

@@ -1,0 +1,41 @@
+name: fnbposai-db-pg-primary-service
+
+services:
+  fnbposai-db-pg-primary:
+    image: postgres:18
+    container_name: fnbposai-db-pg-primary
+    environment:
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_INITDB_ARGS: ${POSTGRES_INITDB_ARGS}
+      POSTGRES_HOST_AUTH_METHOD: ${POSTGRES_HOST_AUTH_METHOD}
+    ports:
+      - "127.0.0.1:5432:5432"
+    command:
+      - postgres
+      - -c
+      - wal_level=replica
+      - -c
+      - max_wal_senders=10
+      - -c
+      - hot_standby=on
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d/
+      - fnbposai-db-pg-primary-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 12s
+      timeout: 6s
+      retries: 6
+    networks:
+      - docker0
+    restart: never # always | unless-stopped | never
+
+volumes:
+  fnbposai-db-pg-primary-volume:
+
+networks:
+  docker0:
+    external: true
