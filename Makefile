@@ -14,6 +14,13 @@ postgres-down:
 		docker-compose -f ./containers/postgres/compose.yml down; \
 	fi
 
+.PHONY: postgres-down-prune
+postgres-down-prune:
+	@read -p "Remove this project postgres contaniner and the volume? [y/n] " answer; \
+	if [[ "$$answer" == "y" || "$$answer" == "Y" ]]; then \
+		docker-compose -f ./containers/postgres/compose.yml down -v; \
+	fi
+
 .PHONY: postgres-start
 postgres-start:
 	docker-compose -f ./containers/postgres/compose.yml start;
@@ -39,6 +46,13 @@ redis-down:
 		docker-compose -f ./containers/redis/compose.yml down; \
 	fi
 
+.PHONY: redis-down-prune
+redis-down-prune:
+	@read -p "Remove this project redis contaniner and the volume? [y/n] " answer; \
+	if [[ "$$answer" == "y" || "$$answer" == "Y" ]]; then \
+		docker-compose -f ./containers/redis/compose.yml down -v; \
+	fi
+
 .PHONY: redis-start
 redis-start:
 	docker-compose -f ./containers/redis/compose.yml start;
@@ -62,6 +76,13 @@ kafka-down:
 	@read -p "Remove this project kafka contaniner? [y/n] " answer; \
 	if [[ "$$answer" == "y" || "$$answer" == "Y" ]]; then \
 		docker-compose -f ./containers/kafka/compose.yml down; \
+	fi
+
+.PHONY: kafka-down-prune
+kafka-down-prune:
+	@read -p "Remove this project kafka contaniner and the volume? [y/n] " answer; \
+	if [[ "$$answer" == "y" || "$$answer" == "Y" ]]; then \
+		docker-compose -f ./containers/kafka/compose.yml down -v; \
 	fi
 
 .PHONY: kafka-start
