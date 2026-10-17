@@ -1,0 +1,21 @@
+[submodule "fnbposai-be-account"]
+	path = fnbposai-be-account
+	url = git@github.com:prothegee/fnbposai-be-account
+[submodule "fnbposai-be-ai"]
+	path = fnbposai-be-ai
+	url = git@github.com:prothegee/fnbposai-be-ai
+[submodule "fnbposai-be-media"]
+	path = fnbposai-be-media
+	url = git@github.com:prothegee/fnbposai-be-media
+[submodule "fnbposai-be-pos"]
+	path = fnbposai-be-pos
+	url = git@github.com:prothegee/fnbposai-be-pos
+[submodule "fnbposai-be-tenant"]
+	path = fnbposai-be-tenant
+	url = git@github.com:prothegee/fnbposai-be-tenant
+[submodule "fnbposai-fe-pos"]
+	path = fnbposai-fe-pos
+	url = git@github.com:prothegee/fnbposai-fe-pos
+[submodule "fnbposai-be-gateway"]
+	path = fnbposai-be-gateway
+	url = git@github.com:prothegee/fnbposai-be-gateway
