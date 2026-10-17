@@ -1,0 +1,29 @@
+name: fnbposai-db-rd-service
+
+services:
+  fnbposai-db-rd:
+    image: redis:8
+    container_name: fnbposai-db-rd
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    command: >
+      sh -c 'redis-server --requirepass "$$REDIS_PASSWORD" --bind 0.0.0.0 --protected-mode yes'
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - fnbposai-db-rd-volume:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 12s
+      timeout: 6s
+      retries: 6
+    networks:
+      - docker0
+    restart: never # always | unless-stopped | never
+
+volumes:
+  fnbposai-db-rd-volume:
+
+networks:
+  docker0:
+    external: true

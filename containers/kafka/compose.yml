@@ -1,0 +1,46 @@
+name: fnbposai-brkr-kfk-service
+
+services:
+  fnbposai-broker-kfk:
+    image: apache/kafka:4.2.2
+    container_name: fnbposai-brkr-kfk
+    environment:
+      # KRaft mode (no ZooKeeper)
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@fnbposai-brkr-kfk:9093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      # Listeners & security protocol mapping
+      KAFKA_LISTENERS: SASL_PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: SASL_PLAINTEXT://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,SASL_PLAINTEXT:SASL_PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: SASL_PLAINTEXT
+      # SASL/PLAIN authentication
+      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
+      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
+      # Explicitly set KAFKA_OPTS to bypass the configure script bug
+      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/kafka_jaas.conf"
+      # Single-node replication factors
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+    ports:
+      - "127.0.0.1:9092:9092"
+    volumes:
+      - fnbposai-brkr-kfk-volume:/var/lib/kafka/data
+      - ./kafka_jaas.conf:/etc/kafka/kafka_jaas.conf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 9092 || exit 1"]
+      interval: 12s
+      timeout: 6s
+      retries: 6
+    networks:
+      - docker0
+    restart: never # always | unless-stopped | never
+
+volumes:
+  fnbposai-brkr-kfk-volume:
+
+networks:
+  docker0:
+    external: true

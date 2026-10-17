@@ -1,0 +1,377 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <style>
+      text { font-family: 'Inter','Segoe UI',system-ui,-apple-system,sans-serif; }
+    </style>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-opacity="0.04"/>
+    </filter>
+    <clipPath id="avatarClip"><circle cx="1390" cy="40" r="20"/></clipPath>
+    <g id="stockThumb">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#eef2f7" stroke="#e2e8f0"/>
+      <rect x="8" y="10" width="20" height="16" rx="2" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="8" y1="16" x2="28" y2="16" stroke="#94a3b8" stroke-width="1.5"/>
+    </g>
+  </defs>
+
+  <!-- ============ BACKGROUND ============ -->
+  <rect x="0" y="0" width="1440" height="900" fill="#f8fafc"/>
+
+  <!-- ============ TOP BAR ============ -->
+  <rect x="0" y="0" width="1440" height="80" fill="#ffffff"/>
+  <line x1="0" y1="80" x2="1440" y2="80" stroke="#e2e8f0" stroke-width="1"/>
+
+  <rect x="20" y="20" width="44" height="44" rx="10" fill="#e0edff" stroke="#bfdbfe"/>
+  <circle cx="33" cy="32" r="3.2" fill="#93c5fd"/>
+  <path d="M28 54 L37 43 L43 50 L47 45 L56 54 Z" fill="#93c5fd"/>
+
+  <line x1="78" y1="22" x2="78" y2="58" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <text x="94" y="38" font-size="15" font-weight="600" fill="#0f172a">Sunrise Café</text>
+  <rect x="94" y="46" width="168" height="24" rx="12" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="107" y="62" font-size="11.5" fill="#475569">Downtown Branch</text>
+  <text x="246" y="63" font-size="10" fill="#64748b">▾</text>
+
+  <text x="1340" y="36" font-size="13" font-weight="600" fill="#0f172a" text-anchor="end">jdoe</text>
+  <text x="1340" y="53" font-size="10.5" fill="#64748b" text-anchor="end">Cashier</text>
+  <line x1="1352" y1="22" x2="1352" y2="58" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+  <circle cx="1390" cy="40" r="20" fill="#e2e8f0" stroke="#cbd5e1"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="1390" cy="34" r="7" fill="#94a3b8"/>
+    <circle cx="1390" cy="59" r="14" fill="#94a3b8"/>
+  </g>
+
+  <!-- ============ LEFT SIDEBAR ============ -->
+  <rect x="0" y="80" width="210" height="820" fill="#ffffff"/>
+  <line x1="210" y1="80" x2="210" y2="900" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="20" y="104" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1.2">MENU</text>
+  <circle cx="188" cy="100" r="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="188" y="104" font-size="10" fill="#64748b" text-anchor="middle">«</text>
+
+  <rect x="20" y="132" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <circle cx="26" cy="138" r="1.7" fill="#94a3b8"/>
+  <circle cx="32" cy="138" r="1.7" fill="#94a3b8"/>
+  <circle cx="26" cy="144" r="1.7" fill="#94a3b8"/>
+  <circle cx="32" cy="144" r="1.7" fill="#94a3b8"/>
+  <text x="50" y="145" font-size="12.5" fill="#334155">Items</text>
+
+  <rect x="20" y="178" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="24" y1="183" x2="34" y2="183" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="24" y1="187" x2="34" y2="187" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="24" y1="191" x2="30" y2="191" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="191" font-size="12.5" fill="#334155">Order</text>
+
+  <rect x="20" y="224" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="25" y1="239" x2="25" y2="233" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="239" x2="30" y2="228" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="35" y1="239" x2="35" y2="231" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <text x="50" y="237" font-size="12.5" fill="#334155">Sales</text>
+
+  <rect x="20" y="270" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M23 279 L29 273 L35 279" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-linejoin="round"/>
+  <rect x="25" y="279" width="8" height="7" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+  <text x="50" y="283" font-size="12.5" fill="#334155">Tenant</text>
+
+  <rect x="12" y="296" width="186" height="32" rx="8" fill="#eff6ff"/>
+  <rect x="20" y="303" width="18" height="18" rx="5" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="24" y="308" width="10" height="9" rx="1.5" fill="none" stroke="#2563eb" stroke-width="1.4"/>
+  <line x1="24" y1="312" x2="34" y2="312" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="50" y="315" font-size="12.5" font-weight="600" fill="#2563eb">Stocks</text>
+
+  <rect x="20" y="346" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="24" y="350" width="10" height="8" rx="1.5" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+  <line x1="29" y1="358" x2="29" y2="361" stroke="#94a3b8" stroke-width="1.4"/>
+  <line x1="26" y1="362" x2="32" y2="362" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="359" font-size="12.5" fill="#334155">Monitor</text>
+  <text x="188" y="360" font-size="9" fill="#64748b" text-anchor="middle">▾</text>
+
+  <line x1="32" y1="378" x2="32" y2="424" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="32" cy="398" r="3" fill="#cbd5e1"/>
+  <text x="46" y="395" font-size="12" fill="#475569">Orders in &amp; out</text>
+  <text x="46" y="411" font-size="9.5" fill="#94a3b8">Kitchen &amp; Bar</text>
+
+  <line x1="16" y1="820" x2="194" y2="820" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="20" y="841" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M30 845 L30 855 M30 845 L36 845 M30 855 L36 855 M33 850 L38 850" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="854" font-size="12.5" fill="#334155">Sign out</text>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <rect x="210" y="80" width="1230" height="820" fill="#f8fafc"/>
+
+  <!-- ============ TAB BAR ============ -->
+  <rect x="230" y="96" width="1190" height="44" rx="10" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1"/>
+
+  <rect x="240" y="104" width="120" height="28" rx="6" fill="#eff6ff"/>
+  <text x="300" y="123" font-size="12.5" font-weight="600" fill="#2563eb" text-anchor="middle">Stock Status</text>
+
+  <rect x="370" y="104" width="110" height="28" rx="6" fill="transparent"/>
+  <text x="425" y="123" font-size="12.5" font-weight="500" fill="#64748b" text-anchor="middle">Add Stock</text>
+
+  <!-- ============ SUMMARY CARDS ============ -->
+
+  <rect x="230" y="156" width="380" height="110" rx="12" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="250" y="176" width="40" height="40" rx="10" fill="#f0fdf4"/>
+  <circle cx="270" cy="196" r="10" fill="none" stroke="#22c55e" stroke-width="2"/>
+  <path d="M264 196 L269 201 L277 191" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="305" y="186" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">NORMAL STOCK</text>
+  <text x="305" y="214" font-size="26" font-weight="700" fill="#0f172a">42</text>
+  <text x="348" y="214" font-size="11" fill="#64748b">items</text>
+  <text x="305" y="238" font-size="10.5" fill="#22c55e">Above warning quantity</text>
+
+  <rect x="630" y="156" width="380" height="110" rx="12" fill="#ffffff" filter="url(#cardShadow)" stroke="#fef3c7" stroke-width="2"/>
+  <rect x="650" y="176" width="40" height="40" rx="10" fill="#fef3c7"/>
+  <path d="M666 196 L670 186 L678 196" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="670" cy="200" r="1.3" fill="#d97706"/>
+  <circle cx="674" cy="200" r="1.3" fill="#d97706"/>
+  <text x="705" y="186" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">WARNING STOCK</text>
+  <text x="705" y="214" font-size="26" font-weight="700" fill="#d97706">8</text>
+  <text x="726" y="214" font-size="11" fill="#64748b">items</text>
+  <text x="705" y="238" font-size="10.5" fill="#d97706">At or below warning level</text>
+
+  <rect x="1030" y="156" width="390" height="110" rx="12" fill="#ffffff" filter="url(#cardShadow)" stroke="#fecaca" stroke-width="2"/>
+  <rect x="1050" y="176" width="40" height="40" rx="10" fill="#fef2f2"/>
+  <circle cx="1070" cy="196" r="10" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <line x1="1064" y1="190" x2="1076" y2="202" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <line x1="1076" y1="190" x2="1064" y2="202" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <text x="1105" y="186" font-size="11" font-weight="600" fill="#64748b" letter-spacing="0.5">OUT OF STOCK</text>
+  <text x="1105" y="214" font-size="26" font-weight="700" fill="#dc2626">3</text>
+  <text x="1126" y="214" font-size="11" fill="#64748b">items</text>
+  <text x="1105" y="238" font-size="10.5" fill="#dc2626">Quantity is 0 — restock now</text>
+
+  <!-- ============ SEARCH / FILTER BAR ============ -->
+  <rect x="230" y="282" width="1190" height="44" rx="10" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1"/>
+
+  <rect x="245" y="291" width="260" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <circle cx="262" cy="304" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="267" y1="309" x2="272" y2="314" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="282" y="308" font-size="11.5" fill="#94a3b8">Search stocks...</text>
+
+  <rect x="520" y="291" width="110" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="535" y="308" font-size="11.5" fill="#475569">All Categories</text>
+  <text x="615" y="309" font-size="9" fill="#94a3b8">▾</text>
+
+  <rect x="645" y="291" width="120" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="660" y="308" font-size="11.5" fill="#475569">All Status</text>
+  <text x="750" y="309" font-size="9" fill="#94a3b8">▾</text>
+
+  <text x="1400" y="308" font-size="11" fill="#94a3b8" text-anchor="end">53 stocks</text>
+
+  <!-- ============ STOCK LIST TABLE ============ -->
+  <rect x="230" y="342" width="1190" height="500" rx="10" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Table Header -->
+  <rect x="230" y="342" width="1190" height="40" rx="10 10 0 0" fill="#f8fafc"/>
+  <line x1="230" y1="382" x2="1420" y2="382" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="240" y="367" font-size="10.5" font-weight="600" fill="#64748b">IMAGE</text>
+  <text x="295" y="367" font-size="10.5" font-weight="600" fill="#64748b">STOCK NAME</text>
+  <text x="530" y="367" font-size="10.5" font-weight="600" fill="#64748b">CATEGORY</text>
+  <text x="640" y="367" font-size="10.5" font-weight="600" fill="#64748b" text-anchor="end">QTY</text>
+  <text x="700" y="367" font-size="10.5" font-weight="600" fill="#64748b" text-anchor="end">WARN</text>
+  <text x="785" y="367" font-size="10.5" font-weight="600" fill="#64748b" text-anchor="end">WEIGHT</text>
+  <text x="915" y="367" font-size="10.5" font-weight="600" fill="#64748b" text-anchor="end">DEDUCT</text>
+  <text x="940" y="367" font-size="10.5" font-weight="600" fill="#64748b">STATUS</text>
+  <text x="1065" y="367" font-size="10.5" font-weight="600" fill="#64748b">LAST UPDATED</text>
+  <text x="1400" y="367" font-size="10.5" font-weight="600" fill="#64748b" text-anchor="end">ACTIONS</text>
+
+  <!-- ===== ROW 1: Espresso Beans ===== -->
+  <rect x="230" y="382" width="1190" height="52" fill="#ffffff"/>
+  <use href="#stockThumb" x="240" y="390"/>
+  <text x="295" y="409" font-size="13" font-weight="500" fill="#0f172a">Espresso Beans</text>
+  <text x="295" y="424" font-size="10.5" fill="#94a3b8">Dark roast, 1kg bag</text>
+  <text x="530" y="414" font-size="12" fill="#475569">Coffee</text>
+  <text x="640" y="414" font-size="13" font-weight="600" fill="#16a34a" text-anchor="end">24</text>
+  <text x="700" y="414" font-size="12" fill="#64748b" text-anchor="end">10</text>
+  <text x="785" y="414" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">1.00</text>
+  <text x="791" y="414" font-size="11" fill="#94a3b8">kg</text>
+  <text x="915" y="414" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">24.00</text>
+  <text x="921" y="414" font-size="11" fill="#94a3b8">kg</text>
+  <rect x="940" y="402" width="100" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="955" cy="413" r="3.5" fill="#22c55e"/>
+  <text x="966" y="417" font-size="10" font-weight="500" fill="#16a34a">Normal</text>
+  <text x="1065" y="414" font-size="11" fill="#64748b">Feb 20, 2025</text>
+  <rect x="1200" y="400" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="418" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="400" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="418" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="400" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="418" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+  <line x1="240" y1="434" x2="1410" y2="434" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 2: Whole Milk ===== -->
+  <rect x="230" y="434" width="1190" height="52" fill="#ffffff"/>
+  <use href="#stockThumb" x="240" y="442"/>
+  <text x="295" y="461" font-size="13" font-weight="500" fill="#0f172a">Whole Milk</text>
+  <text x="295" y="476" font-size="10.5" fill="#94a3b8">Fresh dairy, chilled</text>
+  <text x="530" y="466" font-size="12" fill="#475569">Dairy</text>
+  <text x="640" y="466" font-size="13" font-weight="600" fill="#16a34a" text-anchor="end">18</text>
+  <text x="700" y="466" font-size="12" fill="#64748b" text-anchor="end">5</text>
+  <text x="785" y="466" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">1.00</text>
+  <text x="791" y="466" font-size="11" fill="#94a3b8">L</text>
+  <text x="915" y="466" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">18.00</text>
+  <text x="921" y="466" font-size="11" fill="#94a3b8">L</text>
+  <rect x="940" y="454" width="100" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="955" cy="465" r="3.5" fill="#22c55e"/>
+  <text x="966" y="469" font-size="10" font-weight="500" fill="#16a34a">Normal</text>
+  <text x="1065" y="466" font-size="11" fill="#64748b">Feb 22, 2025</text>
+  <rect x="1200" y="452" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="470" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="452" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="470" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="452" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="470" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+  <line x1="240" y1="486" x2="1410" y2="486" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 3: White Sugar (Warning) ===== -->
+  <rect x="230" y="486" width="1190" height="52" fill="#fffbeb"/>
+  <use href="#stockThumb" x="240" y="494"/>
+  <text x="295" y="513" font-size="13" font-weight="500" fill="#0f172a">White Sugar</text>
+  <text x="295" y="528" font-size="10.5" fill="#94a3b8">Fine grain, 1kg pack</text>
+  <text x="530" y="518" font-size="12" fill="#475569">Pantry</text>
+  <text x="640" y="518" font-size="13" font-weight="600" fill="#d97706" text-anchor="end">3</text>
+  <text x="700" y="518" font-size="12" fill="#64748b" text-anchor="end">5</text>
+  <text x="785" y="518" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">1.00</text>
+  <text x="791" y="518" font-size="11" fill="#94a3b8">kg</text>
+  <text x="915" y="518" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">3.00</text>
+  <text x="921" y="518" font-size="11" fill="#94a3b8">kg</text>
+  <rect x="940" y="506" width="100" height="22" rx="11" fill="#fef3c7"/>
+  <circle cx="955" cy="517" r="3.5" fill="#d97706"/>
+  <text x="966" y="521" font-size="10" font-weight="500" fill="#d97706">Warning</text>
+  <text x="1065" y="518" font-size="11" fill="#64748b">Feb 25, 2025</text>
+  <rect x="1200" y="504" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="522" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="504" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="522" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="504" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="522" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+  <line x1="240" y1="538" x2="1410" y2="538" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 4: Cocoa Powder (Warning) ===== -->
+  <rect x="230" y="538" width="1190" height="52" fill="#fffbeb"/>
+  <use href="#stockThumb" x="240" y="546"/>
+  <text x="295" y="565" font-size="13" font-weight="500" fill="#0f172a">Cocoa Powder</text>
+  <text x="295" y="580" font-size="10.5" fill="#94a3b8">Unsweetened, 500g</text>
+  <text x="530" y="570" font-size="12" fill="#475569">Pantry</text>
+  <text x="640" y="570" font-size="13" font-weight="600" fill="#d97706" text-anchor="end">2</text>
+  <text x="700" y="570" font-size="12" fill="#64748b" text-anchor="end">4</text>
+  <text x="785" y="570" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">500.00</text>
+  <text x="791" y="570" font-size="11" fill="#94a3b8">g</text>
+  <text x="915" y="570" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">1000.00</text>
+  <text x="921" y="570" font-size="11" fill="#94a3b8">g</text>
+  <rect x="940" y="558" width="100" height="22" rx="11" fill="#fef3c7"/>
+  <circle cx="955" cy="569" r="3.5" fill="#d97706"/>
+  <text x="966" y="573" font-size="10" font-weight="500" fill="#d97706">Warning</text>
+  <text x="1065" y="570" font-size="11" fill="#64748b">Feb 23, 2025</text>
+  <rect x="1200" y="556" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="574" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="556" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="574" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="556" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="574" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+  <line x1="240" y1="590" x2="1410" y2="590" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 5: Vanilla Syrup (Out of Stock) ===== -->
+  <rect x="230" y="590" width="1190" height="52" fill="#fef2f2"/>
+  <use href="#stockThumb" x="240" y="598"/>
+  <text x="295" y="617" font-size="13" font-weight="500" fill="#0f172a">Vanilla Syrup</text>
+  <text x="295" y="632" font-size="10.5" fill="#94a3b8">Flavoring, 750ml bottle</text>
+  <text x="530" y="622" font-size="12" fill="#475569">Flavoring</text>
+  <text x="640" y="622" font-size="13" font-weight="600" fill="#dc2626" text-anchor="end">0</text>
+  <text x="700" y="622" font-size="12" fill="#64748b" text-anchor="end">2</text>
+  <text x="785" y="622" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">750.00</text>
+  <text x="791" y="622" font-size="11" fill="#94a3b8">ml</text>
+  <text x="915" y="622" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">0.00</text>
+  <text x="921" y="622" font-size="11" fill="#94a3b8">ml</text>
+  <rect x="940" y="610" width="100" height="22" rx="11" fill="#fee2e2"/>
+  <circle cx="955" cy="621" r="3.5" fill="#dc2626"/>
+  <text x="966" y="625" font-size="10" font-weight="500" fill="#dc2626">Out of Stock</text>
+  <text x="1065" y="622" font-size="11" fill="#64748b">Feb 27, 2025</text>
+  <rect x="1200" y="608" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="626" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="608" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="626" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="608" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="626" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+  <line x1="240" y1="642" x2="1410" y2="642" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 6: Caramel Syrup (Out of Stock) ===== -->
+  <rect x="230" y="642" width="1190" height="52" fill="#fef2f2"/>
+  <use href="#stockThumb" x="240" y="650"/>
+  <text x="295" y="669" font-size="13" font-weight="500" fill="#0f172a">Caramel Syrup</text>
+  <text x="295" y="684" font-size="10.5" fill="#94a3b8">Flavoring, 750ml bottle</text>
+  <text x="530" y="674" font-size="12" fill="#475569">Flavoring</text>
+  <text x="640" y="674" font-size="13" font-weight="600" fill="#dc2626" text-anchor="end">0</text>
+  <text x="700" y="674" font-size="12" fill="#64748b" text-anchor="end">2</text>
+  <text x="785" y="674" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">750.00</text>
+  <text x="791" y="674" font-size="11" fill="#94a3b8">ml</text>
+  <text x="915" y="674" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">0.00</text>
+  <text x="921" y="674" font-size="11" fill="#94a3b8">ml</text>
+  <rect x="940" y="662" width="100" height="22" rx="11" fill="#fee2e2"/>
+  <circle cx="955" cy="673" r="3.5" fill="#dc2626"/>
+  <text x="966" y="677" font-size="10" font-weight="500" fill="#dc2626">Out of Stock</text>
+  <text x="1065" y="674" font-size="11" fill="#64748b">Feb 26, 2025</text>
+  <rect x="1200" y="660" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="678" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="660" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="678" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="660" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="678" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+  <line x1="240" y1="694" x2="1410" y2="694" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 7: Paper Cups ===== -->
+  <rect x="230" y="694" width="1190" height="52" fill="#ffffff"/>
+  <use href="#stockThumb" x="240" y="702"/>
+  <text x="295" y="721" font-size="13" font-weight="500" fill="#0f172a">Paper Cups</text>
+  <text x="295" y="736" font-size="10.5" fill="#94a3b8">12oz, double wall</text>
+  <text x="530" y="726" font-size="12" fill="#475569">Packaging</text>
+  <text x="640" y="726" font-size="13" font-weight="600" fill="#16a34a" text-anchor="end">150</text>
+  <text x="700" y="726" font-size="12" fill="#64748b" text-anchor="end">50</text>
+  <text x="785" y="726" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">12.00</text>
+  <text x="791" y="726" font-size="11" fill="#94a3b8">g</text>
+  <text x="915" y="726" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">1800.00</text>
+  <text x="921" y="726" font-size="11" fill="#94a3b8">g</text>
+  <rect x="940" y="714" width="100" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="955" cy="725" r="3.5" fill="#22c55e"/>
+  <text x="966" y="729" font-size="10" font-weight="500" fill="#16a34a">Normal</text>
+  <text x="1065" y="726" font-size="11" fill="#64748b">Feb 21, 2025</text>
+  <rect x="1200" y="712" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="730" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="712" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="730" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="712" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="730" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+  <line x1="240" y1="746" x2="1410" y2="746" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 8: Napkins ===== -->
+  <rect x="230" y="746" width="1190" height="52" fill="#ffffff"/>
+  <use href="#stockThumb" x="240" y="754"/>
+  <text x="295" y="773" font-size="13" font-weight="500" fill="#0f172a">Napkins</text>
+  <text x="295" y="788" font-size="10.5" fill="#94a3b8">Standard 2-ply</text>
+  <text x="530" y="778" font-size="12" fill="#475569">Packaging</text>
+  <text x="640" y="778" font-size="13" font-weight="600" fill="#16a34a" text-anchor="end">320</text>
+  <text x="700" y="778" font-size="12" fill="#64748b" text-anchor="end">100</text>
+  <text x="785" y="778" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">2.00</text>
+  <text x="791" y="778" font-size="11" fill="#94a3b8">g</text>
+  <text x="915" y="778" font-size="12.5" font-weight="500" fill="#0f172a" text-anchor="end">640.00</text>
+  <text x="921" y="778" font-size="11" fill="#94a3b8">g</text>
+  <rect x="940" y="766" width="100" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="955" cy="777" r="3.5" fill="#22c55e"/>
+  <text x="966" y="781" font-size="10" font-weight="500" fill="#16a34a">Normal</text>
+  <text x="1065" y="778" font-size="11" fill="#64748b">Feb 19, 2025</text>
+  <rect x="1200" y="764" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1225" y="782" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <rect x="1258" y="764" width="50" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1283" y="782" font-size="11" fill="#475569" text-anchor="middle">Info</text>
+  <rect x="1316" y="764" width="84" height="28" rx="7" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="1358" y="782" font-size="11" fill="#2563eb" text-anchor="middle">Linked</text>
+
+  <!-- Scrollbar -->
+  <rect x="1406" y="386" width="6" height="400" rx="3" fill="#f1f5f9"/>
+  <rect x="1406" y="386" width="6" height="140" rx="3" fill="#cbd5e1"/>
+
+  <!-- ============ LAZY LOADING INDICATOR ============ -->
+  <circle cx="820" cy="864" r="7" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
+  <path d="M820 857 A7 7 0 0 1 827 864" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="835" y="868" font-size="11" fill="#94a3b8">Loading more stocks…</text>
+</svg>

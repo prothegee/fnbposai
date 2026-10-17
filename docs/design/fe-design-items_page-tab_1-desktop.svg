@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <style>
+      text { font-family: 'Inter','Segoe UI',system-ui,-apple-system,sans-serif; }
+    </style>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-opacity="0.04"/>
+    </filter>
+    <clipPath id="avatarClip"><circle cx="1390" cy="40" r="20"/></clipPath>
+    <clipPath id="tableClip"><rect x="230" y="300" width="1190" height="460"/></clipPath>
+    <g id="thumbIcon">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#eef2f7" stroke="#e2e8f0"/>
+      <circle cx="12" cy="12" r="4" fill="#cbd5e1"/>
+      <path d="M4 32 L16 20 L24 28 L30 22 L36 32 Z" fill="#cbd5e1"/>
+    </g>
+  </defs>
+
+  <!-- ============ BACKGROUND ============ -->
+  <rect x="0" y="0" width="1440" height="900" fill="#f8fafc"/>
+
+  <!-- ============ TOP BAR ============ -->
+  <rect x="0" y="0" width="1440" height="80" fill="#ffffff"/>
+  <line x1="0" y1="80" x2="1440" y2="80" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Tenant logo -->
+  <rect x="20" y="20" width="44" height="44" rx="10" fill="#e0edff" stroke="#bfdbfe"/>
+  <circle cx="33" cy="32" r="3.2" fill="#93c5fd"/>
+  <path d="M28 54 L37 43 L43 50 L47 45 L56 54 Z" fill="#93c5fd"/>
+
+  <!-- split -->
+  <line x1="78" y1="22" x2="78" y2="58" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Tenant name + branch selector -->
+  <text x="94" y="38" font-size="15" font-weight="600" fill="#0f172a">Sunrise Café</text>
+  <rect x="94" y="46" width="168" height="24" rx="12" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="107" y="62" font-size="11.5" fill="#475569">Downtown Branch</text>
+  <text x="246" y="63" font-size="10" fill="#64748b">▾</text>
+
+  <!-- Right group : user -->
+  <text x="1340" y="36" font-size="13" font-weight="600" fill="#0f172a" text-anchor="end">jdoe</text>
+  <text x="1340" y="53" font-size="10.5" fill="#64748b" text-anchor="end">Cashier</text>
+  <line x1="1352" y1="22" x2="1352" y2="58" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+  <circle cx="1390" cy="40" r="20" fill="#e2e8f0" stroke="#cbd5e1"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="1390" cy="34" r="7" fill="#94a3b8"/>
+    <circle cx="1390" cy="59" r="14" fill="#94a3b8"/>
+  </g>
+
+  <!-- ============ LEFT SIDEBAR ============ -->
+  <rect x="0" y="80" width="210" height="820" fill="#ffffff"/>
+  <line x1="210" y1="80" x2="210" y2="900" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="20" y="104" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1.2">MENU</text>
+  <circle cx="188" cy="100" r="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="188" y="104" font-size="10" fill="#64748b" text-anchor="middle">«</text>
+
+  <!-- Items (Active) -->
+  <rect x="12" y="125" width="186" height="32" rx="8" fill="#eff6ff"/>
+  <rect x="20" y="132" width="18" height="18" rx="5" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="26" cy="138" r="1.7" fill="#2563eb"/>
+  <circle cx="32" cy="138" r="1.7" fill="#2563eb"/>
+  <circle cx="26" cy="144" r="1.7" fill="#2563eb"/>
+  <circle cx="32" cy="144" r="1.7" fill="#2563eb"/>
+  <text x="50" y="145" font-size="12.5" font-weight="600" fill="#2563eb">Items</text>
+
+  <!-- Order -->
+  <rect x="20" y="178" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="24" y1="183" x2="34" y2="183" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="24" y1="187" x2="34" y2="187" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="24" y1="191" x2="30" y2="191" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="191" font-size="12.5" fill="#334155">Order</text>
+
+  <!-- Sales -->
+  <rect x="20" y="224" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="25" y1="239" x2="25" y2="233" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="239" x2="30" y2="228" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="35" y1="239" x2="35" y2="231" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <text x="50" y="237" font-size="12.5" fill="#334155">Sales</text>
+
+  <!-- Tenant -->
+  <rect x="20" y="270" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M23 279 L29 273 L35 279" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-linejoin="round"/>
+  <rect x="25" y="279" width="8" height="7" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+  <text x="50" y="283" font-size="12.5" fill="#334155">Tenant</text>
+
+  <!-- Stocks -->
+  <rect x="20" y="316" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="24" y="322" width="10" height="9" rx="1.5" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+  <line x1="24" y1="326" x2="34" y2="326" stroke="#94a3b8" stroke-width="1.4"/>
+  <text x="50" y="329" font-size="12.5" fill="#334155">Stocks</text>
+
+  <!-- Monitor -->
+  <rect x="20" y="362" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="24" y="366" width="10" height="8" rx="1.5" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+  <line x1="29" y1="374" x2="29" y2="377" stroke="#94a3b8" stroke-width="1.4"/>
+  <line x1="26" y1="378" x2="32" y2="378" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="375" font-size="12.5" fill="#334155">Monitor</text>
+  <text x="188" y="376" font-size="9" fill="#64748b" text-anchor="middle">▾</text>
+
+  <!-- Monitor sub item -->
+  <line x1="32" y1="394" x2="32" y2="440" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="32" cy="414" r="3" fill="#cbd5e1"/>
+  <text x="46" y="411" font-size="12" fill="#475569">Orders in &amp; out</text>
+  <text x="46" y="427" font-size="9.5" fill="#94a3b8">Kitchen &amp; Bar</text>
+
+  <!-- Sign out -->
+  <line x1="16" y1="820" x2="194" y2="820" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="20" y="841" width="18" height="18" rx="5" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M30 845 L30 855 M30 845 L36 845 M30 855 L36 855 M33 850 L38 850" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="854" font-size="12.5" fill="#334155">Sign out</text>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <rect x="210" y="80" width="1230" height="820" fill="#f8fafc"/>
+
+  <!-- ============ TAB BAR ============ -->
+  <rect x="230" y="96" width="1190" height="44" rx="10" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Tab 1: Items Data (Active) -->
+  <rect x="240" y="104" width="110" height="28" rx="6" fill="#eff6ff"/>
+  <text x="295" y="123" font-size="12.5" font-weight="600" fill="#2563eb" text-anchor="middle">Items Data</text>
+
+  <!-- Tab 2: Add Item -->
+  <rect x="360" y="104" width="100" height="28" rx="6" fill="transparent"/>
+  <text x="410" y="123" font-size="12.5" font-weight="500" fill="#64748b" text-anchor="middle">Add Item</text>
+
+  <!-- ============ SEARCH / FILTER BAR ============ -->
+  <rect x="230" y="156" width="1190" height="44" rx="10" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Search input -->
+  <rect x="245" y="165" width="260" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <circle cx="262" cy="178" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="267" y1="183" x2="272" y2="188" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="282" y="182" font-size="11.5" fill="#94a3b8">Search items...</text>
+
+  <!-- Category filter -->
+  <rect x="520" y="165" width="110" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="535" y="182" font-size="11.5" fill="#475569">All Categories</text>
+  <text x="615" y="183" font-size="9" fill="#94a3b8">▾</text>
+
+  <!-- Status filter -->
+  <rect x="645" y="165" width="100" height="26" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="660" y="182" font-size="11.5" fill="#475569">All Status</text>
+  <text x="730" y="183" font-size="9" fill="#94a3b8">▾</text>
+
+  <!-- Results count -->
+  <text x="1400" y="182" font-size="11" fill="#94a3b8" text-anchor="end">24 items</text>
+
+  <!-- ============ ITEMS TABLE ============ -->
+  <rect x="230" y="216" width="1190" height="660" rx="10" fill="#ffffff" filter="url(#cardShadow)" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Table Header -->
+  <rect x="230" y="216" width="1190" height="40" rx="10 10 0 0" fill="#f8fafc"/>
+  <line x1="230" y1="256" x2="1420" y2="256" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="240" y="241" font-size="10.5" font-weight="600" fill="#64748b">IMAGE</text>
+  <text x="295" y="241" font-size="10.5" font-weight="600" fill="#64748b">ITEM NAME</text>
+  <text x="530" y="241" font-size="10.5" font-weight="600" fill="#64748b">CATEGORY</text>
+  <text x="740" y="241" font-size="10.5" font-weight="600" fill="#64748b" text-anchor="end">PRICE</text>
+  <text x="760" y="241" font-size="10.5" font-weight="600" fill="#64748b">STATUS</text>
+  <text x="890" y="241" font-size="10.5" font-weight="600" fill="#64748b">CREATED</text>
+  <text x="1040" y="241" font-size="10.5" font-weight="600" fill="#64748b">LAST UPDATED</text>
+  <text x="1200" y="241" font-size="10.5" font-weight="600" fill="#64748b">ACTIONS</text>
+
+  <!-- ===== ROW 1: Cappuccino ===== -->
+  <rect x="230" y="256" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="266"/>
+  <text x="295" y="285" font-size="13" font-weight="500" fill="#0f172a">Cappuccino</text>
+  <text x="295" y="301" font-size="10.5" fill="#94a3b8">Classic espresso with steamed milk foam</text>
+  <text x="530" y="292" font-size="12" fill="#475569">Coffee</text>
+  <text x="740" y="292" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$3.50</text>
+  <!-- Status pill (width 88) -->
+  <rect x="760" y="280" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="291" r="3.5" fill="#22c55e"/>
+  <text x="790" y="295" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="292" font-size="11" fill="#64748b">Jan 15, 2025</text>
+  <text x="1040" y="292" font-size="11" fill="#64748b">Feb 20, 2025</text>
+  <rect x="1200" y="278" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="296" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="312" x2="1410" y2="312" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 2: Latte ===== -->
+  <rect x="230" y="312" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="322"/>
+  <text x="295" y="341" font-size="13" font-weight="500" fill="#0f172a">Latte</text>
+  <text x="295" y="357" font-size="10.5" fill="#94a3b8">Smooth espresso with steamed milk</text>
+  <text x="530" y="348" font-size="12" fill="#475569">Coffee</text>
+  <text x="740" y="348" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$3.80</text>
+  <rect x="760" y="336" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="347" r="3.5" fill="#22c55e"/>
+  <text x="790" y="351" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="348" font-size="11" fill="#64748b">Jan 15, 2025</text>
+  <text x="1040" y="348" font-size="11" fill="#64748b">Feb 18, 2025</text>
+  <rect x="1200" y="334" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="352" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="368" x2="1410" y2="368" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 3: Espresso ===== -->
+  <rect x="230" y="368" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="378"/>
+  <text x="295" y="397" font-size="13" font-weight="500" fill="#0f172a">Espresso</text>
+  <text x="295" y="413" font-size="10.5" fill="#94a3b8">Rich and bold single shot</text>
+  <text x="530" y="404" font-size="12" fill="#475569">Coffee</text>
+  <text x="740" y="404" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$2.50</text>
+  <rect x="760" y="392" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="403" r="3.5" fill="#22c55e"/>
+  <text x="790" y="407" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="404" font-size="11" fill="#64748b">Jan 10, 2025</text>
+  <text x="1040" y="404" font-size="11" fill="#64748b">Jan 10, 2025</text>
+  <rect x="1200" y="390" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="408" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="424" x2="1410" y2="424" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 4: Green Tea ===== -->
+  <rect x="230" y="424" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="434"/>
+  <text x="295" y="453" font-size="13" font-weight="500" fill="#0f172a">Green Tea</text>
+  <text x="295" y="469" font-size="10.5" fill="#94a3b8">Organic jasmine green tea</text>
+  <text x="530" y="460" font-size="12" fill="#475569">Tea</text>
+  <text x="740" y="460" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$2.80</text>
+  <rect x="760" y="448" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="459" r="3.5" fill="#22c55e"/>
+  <text x="790" y="463" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="460" font-size="11" fill="#64748b">Feb 01, 2025</text>
+  <text x="1040" y="460" font-size="11" fill="#64748b">Feb 15, 2025</text>
+  <rect x="1200" y="446" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="464" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="480" x2="1410" y2="480" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 5: Croissant (Draft) ===== -->
+  <rect x="230" y="480" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="490"/>
+  <text x="295" y="509" font-size="13" font-weight="500" fill="#0f172a">Croissant</text>
+  <text x="295" y="525" font-size="10.5" fill="#94a3b8">Butter croissant, baked fresh daily</text>
+  <text x="530" y="516" font-size="12" fill="#475569">Bakery</text>
+  <text x="740" y="516" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$2.20</text>
+  <rect x="760" y="504" width="88" height="22" rx="11" fill="#fef3c7"/>
+  <circle cx="775" cy="515" r="3.5" fill="#d97706"/>
+  <text x="790" y="519" font-size="10" font-weight="500" fill="#d97706">Draft</text>
+  <text x="890" y="516" font-size="11" fill="#64748b">Feb 10, 2025</text>
+  <text x="1040" y="516" font-size="11" fill="#64748b">Feb 10, 2025</text>
+  <rect x="1200" y="502" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="520" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="536" x2="1410" y2="536" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 6: Iced Americano ===== -->
+  <rect x="230" y="536" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="546"/>
+  <text x="295" y="565" font-size="13" font-weight="500" fill="#0f172a">Iced Americano</text>
+  <text x="295" y="581" font-size="10.5" fill="#94a3b8">Chilled espresso with cold water</text>
+  <text x="530" y="572" font-size="12" fill="#475569">Cold Drinks</text>
+  <text x="740" y="572" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$3.20</text>
+  <rect x="760" y="560" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="571" r="3.5" fill="#22c55e"/>
+  <text x="790" y="575" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="572" font-size="11" fill="#64748b">Jan 20, 2025</text>
+  <text x="1040" y="572" font-size="11" fill="#64748b">Feb 12, 2025</text>
+  <rect x="1200" y="558" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="576" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="592" x2="1410" y2="592" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 7: Cheesecake ===== -->
+  <rect x="230" y="592" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="602"/>
+  <text x="295" y="621" font-size="13" font-weight="500" fill="#0f172a">Cheesecake</text>
+  <text x="295" y="637" font-size="10.5" fill="#94a3b8">New York style with berry compote</text>
+  <text x="530" y="628" font-size="12" fill="#475569">Desserts</text>
+  <text x="740" y="628" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$4.50</text>
+  <rect x="760" y="616" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="627" r="3.5" fill="#22c55e"/>
+  <text x="790" y="631" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="628" font-size="11" fill="#64748b">Jan 05, 2025</text>
+  <text x="1040" y="628" font-size="11" fill="#64748b">Mar 01, 2025</text>
+  <rect x="1200" y="614" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="632" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="648" x2="1410" y2="648" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 8: Club Sandwich (Archived) ===== -->
+  <rect x="230" y="648" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="658"/>
+  <text x="295" y="677" font-size="13" font-weight="500" fill="#0f172a">Club Sandwich</text>
+  <text x="295" y="693" font-size="10.5" fill="#94a3b8">Triple decker with turkey and bacon</text>
+  <text x="530" y="684" font-size="12" fill="#475569">Main Course</text>
+  <text x="740" y="684" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$6.90</text>
+  <rect x="760" y="672" width="88" height="22" rx="11" fill="#f1f5f9"/>
+  <circle cx="775" cy="683" r="3.5" fill="#64748b"/>
+  <text x="790" y="687" font-size="10" font-weight="500" fill="#64748b">Archived</text>
+  <text x="890" y="684" font-size="11" fill="#64748b">Dec 01, 2024</text>
+  <text x="1040" y="684" font-size="11" fill="#64748b">Jan 15, 2025</text>
+  <rect x="1200" y="670" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="688" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="704" x2="1410" y2="704" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 9: Blueberry Muffin ===== -->
+  <rect x="230" y="704" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="714"/>
+  <text x="295" y="733" font-size="13" font-weight="500" fill="#0f172a">Blueberry Muffin</text>
+  <text x="295" y="749" font-size="10.5" fill="#94a3b8">Fresh blueberries, soft crumb</text>
+  <text x="530" y="740" font-size="12" fill="#475569">Bakery</text>
+  <text x="740" y="740" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$3.10</text>
+  <rect x="760" y="728" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="739" r="3.5" fill="#22c55e"/>
+  <text x="790" y="743" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="740" font-size="11" fill="#64748b">Feb 05, 2025</text>
+  <text x="1040" y="740" font-size="11" fill="#64748b">Feb 28, 2025</text>
+  <rect x="1200" y="726" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="744" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+  <line x1="240" y1="760" x2="1410" y2="760" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ===== ROW 10: Beef Burger ===== -->
+  <rect x="230" y="760" width="1190" height="56" fill="#ffffff"/>
+  <use href="#thumbIcon" x="240" y="770"/>
+  <text x="295" y="789" font-size="13" font-weight="500" fill="#0f172a">Beef Burger</text>
+  <text x="295" y="805" font-size="10.5" fill="#94a3b8">Angus beef patty, cheddar, lettuce</text>
+  <text x="530" y="796" font-size="12" fill="#475569">Main Course</text>
+  <text x="740" y="796" font-size="12.5" font-weight="600" fill="#0f172a" text-anchor="end">$8.50</text>
+  <rect x="760" y="784" width="88" height="22" rx="11" fill="#f0fdf4"/>
+  <circle cx="775" cy="795" r="3.5" fill="#22c55e"/>
+  <text x="790" y="799" font-size="10" font-weight="500" fill="#16a34a">Active</text>
+  <text x="890" y="796" font-size="11" fill="#64748b">Jan 28, 2025</text>
+  <text x="1040" y="796" font-size="11" fill="#64748b">Mar 10, 2025</text>
+  <rect x="1200" y="782" width="56" height="28" rx="7" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="1228" y="800" font-size="11" fill="#475569" text-anchor="middle">Edit</text>
+
+  <!-- Scrollbar track -->
+  <rect x="1406" y="260" width="6" height="560" rx="3" fill="#f1f5f9"/>
+  <rect x="1406" y="260" width="6" height="180" rx="3" fill="#cbd5e1"/>
+
+  <!-- ============ LAZY LOADING INDICATOR ============ -->
+  <circle cx="820" cy="838" r="7" fill="none" stroke="#e2e8f0" stroke-width="2.5"/>
+  <path d="M820 831 A7 7 0 0 1 827 838" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="835" y="842" font-size="11" fill="#94a3b8">Loading more items…</text>
+</svg>
