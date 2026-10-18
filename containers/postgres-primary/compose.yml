@@ -12,7 +12,7 @@ services:
       POSTGRES_INITDB_ARGS: ${POSTGRES_INITDB_ARGS}
       POSTGRES_HOST_AUTH_METHOD: ${POSTGRES_HOST_AUTH_METHOD}
     ports:
-      - "127.0.0.1:5432:5432"
+      - "0.0.0.0:5432:5432"
     command:
       - postgres
       - -c
