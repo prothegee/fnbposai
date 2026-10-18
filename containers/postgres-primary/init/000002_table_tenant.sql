@@ -2,12 +2,13 @@ create table if not exists tenant(
     id              uuid        unique primary key default uuidv7(),
     id_ref          text        unique not null
                                 generated always as (replace(id::text, '-', '')) stored,
-    -- All lower case, only accept alphanumeric and 1 whitespace.
-    name            text        unique not null,
     -- This is came from where user owner assign their tenant name
     -- accept combination upper+lower case, alphanumeric, 1 whitespace after char,
     -- and symbols. No emoji.
     name_display    text        not null,
+    -- All lower case, only accept alphanumeric and 1 whitespace.
+    name            text        unique not null
+                                generated always as (lower(name_display::text)) stored,
     owner           uuid        not null,
     date_created    timestamp   not null default now(),
     last_update     timestamp   null,
@@ -18,27 +19,31 @@ create table if not exists tenant(
         on delete cascade
 );
 
+create index if not exists idx_tenant_id_ref on tenant(id_ref);
+create index if not exists idx_tenant_owner on account(id);
+
 /* --------------------------------------------------------- */
 
 create table if not exists tenant_branch(
-    id              uuid        unique primary key default uuidv7(),
-    id_ref          text        unique not null
+    id              uuid        primary key default uuidv7(),
+    id_ref          text        not null
                                 generated always as (replace(id::text, '-', '')) stored,
     id_tenant       uuid        not null,
-    -- All lower case, only accept alphanumeric and 1 whitespace.
-    name            text        unique not null,
     -- This is came from where user owner assign their tenant name
     -- accept combination upper+lower case, alphanumeric, 1 whitespace after char,
     -- and symbols. No emoji.
     name_display    text        not null,
-    owner           uuid        not null,
+    -- All lower case, only accept alphanumeric and 1 whitespace.
+    name            text        not null
+                                generated always as (lower(name_display::text)) stored,
     pub_path        text        unique not null
                                 generated always as
                                 (
                                 't/' ||
                                 replace(id_tenant::text, '-', '') ||
                                 '/' ||
-                                replace(id::text, '-', '')
+                                replace(id::text, '-', '') ||
+                                '/'
                                 ) stored,
     pub_pict        text        null,
     date_created    timestamp   not null default now(),
@@ -47,46 +52,11 @@ create table if not exists tenant_branch(
     constraint fk_branch_id_tenant
         foreign key (id_tenant)
         references tenant(id)
-        on delete cascade,
-    constraint fk_tenant_owner
-        foreign key (owner)
-        references account(id)
         on delete cascade
 );
 
-create table if not exists tenant_branch(
-    id              uuid        unique primary key default uuidv7(),
-    id_ref          text        unique not null
-                                generated always as (replace(id::text, '-', '')) stored,
-    id_tenant       uuid        not null,
-    -- All lower case, only accept alphanumeric and 1 whitespace.
-    name            text        not null,
-    -- This is came from where user owner assign their tenant name
-    -- accept combination upper+lower case, alphanumeric, 1 whitespace after char,
-    -- and symbols. No emoji.
-    name_display    text        not null,
-    owner           uuid        not null,
-    pub_path        text        unique not null
-                                generated always as
-                                (
-                                't/' ||
-                                replace(text, '-', '') ||
-                                '/' ||
-                                replace(id::text, '-', '')
-                                ) stored,
-    pub_pict        text        null,
-    date_created    timestamp   not null default now(),
-    last_update     timestamp   null,
-
-    constraint fk_branch_id_tenant
-        foreign key (id_tenant)
-        references tenant(id)
-        on delete cascade,
-    constraint fk_tenant_owner
-        foreign key (owner)
-        references account(id)
-        on delete cascade
-);
+create index if not exists idx_tenant_branch_id_ref on tenant_branch(id_ref);
+create index if not exists idx_tenant_branch_id_tenant on tenant_branch(id_tenant);
 
 /* --------------------------------------------------------- */
 
@@ -122,10 +92,10 @@ begin
               (i.e. "Manager", "Barista", "Cashier", & etc.).
             - Can assign role_definition for member
               as 'branch admin', or 'member'.
-        - 'member':
-            - Enum object is go/ts: `Member`.
+        - 'staff':
+            - Enum object is go/ts: `Staff`.
         */
-        'owner', 'tenant admin', 'branch admin', 'member'
+        'owner', 'tenant admin', 'branch admin', 'staff'
         );
     end;
 
@@ -149,7 +119,7 @@ create table if not exists tenant_members(
     id_account          uuid            not null,
     role                role_t          not null,
     position            text            null,
-    accesses            access_t[]      null,
+    accesses            access_t[]      null default array[]::access_t[],
     date_created        timestamp       not null default now(),
     last_update         timestamp       null,
 
