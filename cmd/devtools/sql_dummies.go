@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/prothegee/fnbposai/cmd/devtools/sql_dummies"
+)
 
 func GenSqlDummies() {
-	fmt.Println("GENERATE: SQL Dummies")
+	sql_dummies.GenerateDemoDummies()
 }
