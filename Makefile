@@ -5,6 +5,8 @@ SHELL := /bin/bash
 
 # --------------------------------------------------------- #
 
+##@ Info
+
 .PHONY: help
 help: ## Show this help message
 	@awk 'BEGIN {FS = ":.*##"} \
@@ -100,16 +102,16 @@ postgres-up: ## Start primary + replica
 postgres-down: ## Stop & remove primary + replica
 	@read -p "Remove this project postgres primary & replica container? [y/n] " answer; \
 	if [[ "$$answer" == "y" || "$$answer" == "Y" ]]; then \
-		make postgres-primary-down; \
-		make postgres-replica-down; \
+		docker-compose -f ./containers/postgres-primary/compose.yml down; \
+		docker-compose -f ./containers/postgres-replica/compose.yml down; \
 	fi
 
 .PHONY: postgres-down-v
 postgres-down-v: ## Stop & remove primary + replica and volumes
 	@read -p "Remove this project postgres primary & replica container and the volume? [y/n] " answer; \
 	if [[ "$$answer" == "y" || "$$answer" == "Y" ]]; then \
-		make postgres-primary-down-v; \
-		make postgres-replica-down-v; \
+		docker-compose -f ./containers/postgres-primary/compose.yml down -v; \
+		docker-compose -f ./containers/postgres-replica/compose.yml down -v; \
 	fi
 
 .PHONY: postgres-start
@@ -202,3 +204,11 @@ kafka-restart: ## Restart kafka container
 .PHONY: kafka-logs
 kafka-logs: ## Tail kafka logs
 	docker-compose -f ./containers/kafka/compose.yml logs;
+
+# --------------------------------------------------------- #
+
+##@ Gen
+
+.PHONY: gen-sql_dummies
+gen-sql_dummies: ## Generate sql dummies for this project
+	go run ./cmd/devtools gen sqldummies
