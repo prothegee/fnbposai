@@ -74,6 +74,10 @@ Repo: https://github.com/leejet/stable-diffusion.cpp
 
 Ports: [1234].
 
+Notes:
+- Currently auto generate image is simple prompt,
+  in the future, the AI Generate button should show the prompt for the actual input.
+
 <br>
 
 #### MCP SearXNG

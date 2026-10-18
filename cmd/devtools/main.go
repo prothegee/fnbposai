@@ -11,7 +11,7 @@ import (
 
 func handleGen(args []string) {
 	if len(args) < 1 {
-		fmt.Println("usage: go run cmd/prog/main.go gen <sqldummy|...>")
+		fmt.Println("usage: go run cmd/prog/main.go gen <sqldummies|...>")
 		return
 	}
 
@@ -42,7 +42,7 @@ func main() {
 	}
 
 	switch os.Args[1] {
-	case "gen":
+	case "generate":
 		handleGen(os.Args[2:])
 	default:
 		fmt.Printf("unknown command: %q\n", os.Args[1])
