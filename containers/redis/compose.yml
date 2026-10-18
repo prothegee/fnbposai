@@ -9,7 +9,7 @@ services:
     command: >
       sh -c 'redis-server --requirepass "$$REDIS_PASSWORD" --bind 0.0.0.0 --protected-mode yes'
     ports:
-      - "127.0.0.1:6379:6379"
+      - "0.0.0.0:6379:6379"
     volumes:
       - fnbposai-db-rd-volume:/data
     healthcheck:
