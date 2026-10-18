@@ -171,3 +171,25 @@ create table if not exists tenant_members(
 
 create index if not exists idx_members_id_tenant_branch on tenant_members(id_tenant_branch);
 create index if not exists idx_members_id_account on tenant_members(id_account);
+
+/* --------------------------------------------------------- */
+
+create table if not exists tenant_taxes(
+    id                  uuid            primary key default uuidv7(),
+    id_tenant           uuid            not null,
+    id_tenant_branch    uuid            not null,
+    name_of_tax         text            not null,
+    name_of_tax_display text            not null
+                                        generated always as (lower(name_of_tax)) stored,
+    percentage          numeric(6,2)    not null,
+    -- if true, all tnenat branch pos orders include this tax
+    applied_as_default  boolean         not null default false,
+    date_created        timestamp       not null default now(),
+    last_update         timestamp       null,
+
+    constraint chk_tenant_taxes_percentage
+        check (percentage >= 0 and percentage <= 100)
+);
+
+create index if not exists idx_tenant_taxes_id_tenant on tenant_taxes(id_tenant);
+create index if not exists idx_tenant_taxes_id_tenant_branch on tenant_taxes(id_tenant_branch);
