@@ -22,7 +22,9 @@ insert into pos_items
     use_sync_stock,
     thumbnail,
     category,
-    tags
+    tags,
+    price,
+    processing_time
 )
 values
 (
@@ -34,7 +36,9 @@ values
     true,
     'beef_burger_NotSquare.png',
     'Burger',
-    array['burger']::text
+    array['burger']::text[],
+    8.50,
+    '00:15:00'
 ),
 (
     -- #2
@@ -45,7 +49,9 @@ values
     true,
     'blueeberry_muffin_NotSquare.png',
     'Pastry',
-    array['pastry']::text
+    array['pastry']::text[],
+    4.00,
+    '00:01:00'
 ),
 (
     -- #3
@@ -56,7 +62,9 @@ values
     true,
     'caesar_salad_NotSquare.png',
     'Salad',
-    array['salad']::text
+    array['salad']::text[],
+    7.50,
+    '00:10:00'
 ),
 (
     -- #4
@@ -67,7 +75,9 @@ values
     true,
     'cheesecake_NotSquare.png',
     'Cake',
-    array['cake']::text
+    array['cake']::text[],
+    6.00,
+    '00:01:00'
 ),
 (
     -- #5
@@ -78,7 +88,9 @@ values
     true,
     'club_sandwich_NotSquare.png',
     'Pastry',
-    array['pastry']::text
+    array['pastry']::text[],
+    9.00,
+    '00:12:00'
 ),
 (
     -- #6
@@ -89,7 +101,9 @@ values
     true,
     'croissant_NotSquare.png',
     'Pastry',
-    array['pastry']::text
+    array['pastry']::text[],
+    3.50,
+    '00:01:00'
 ),
 (
     -- #7
@@ -100,7 +114,9 @@ values
     true,
     'espresso.png',
     'Drink',
-    array['coffee']::text
+    array['coffee']::text[],
+    2.50,
+    '00:02:00'
 ),
 (
     -- #8
@@ -111,7 +127,9 @@ values
     true,
     'flat_white.png',
     'Drink',
-    array['coffee']::text
+    array['coffee']::text[],
+    4.50,
+    '00:03:00'
 ),
 (
     -- #9
@@ -122,7 +140,9 @@ values
     true,
     'green_tea.png',
     'Drink',
-    array['tea']::text
+    array['tea']::text[],
+    3.00,
+    '00:03:00'
 ),
 (
     -- #10
@@ -133,7 +153,9 @@ values
     true,
     'ice_americano.png',
     'Drink',
-    array['coffee', 'ice']::text
+    array['coffee', 'ice']::text[],
+    3.50,
+    '00:03:00'
 ),
 (
     -- #11
@@ -144,7 +166,9 @@ values
     true,
     'ice_americano.png',
     'Drink',
-    array['coffee', 'ice']::text
+    array['coffee', 'ice']::text[],
+    3.50,
+    '00:03:00'
 ),
 (
     -- #12
@@ -155,7 +179,9 @@ values
     true,
     'latte.png',
     'Drink',
-    array['coffee']::text
+    array['coffee']::text[],
+    4.50,
+    '00:03:00'
 );
 
 /* --------------------------------------------------------- */
@@ -796,3 +822,99 @@ values
     40,
     'ml'
 );
+
+/* --------------------------------------------------------- */
+
+insert into pos_orders
+(
+    id_tenant,
+    id_tenant_branch,
+    id_author_account,
+    id_tenant_taxes,
+    type,
+    date_created
+)
+select
+    '01a14e6f-ab53-74d4-af99-f9e541108ba0',
+    '01a14e70-c4b6-70bb-b65a-899d4a53fc9d',
+    (array[
+        '01a14e6f-1b71-79e1-b42c-cfe9c0cbde32'::uuid,
+        '01a150a7-b99b-7063-999f-188f1e6c2499'::uuid
+    ])[(1 + floor(random() * 2))::int],
+    array['01a15307-7dc6-70d3-aea9-ec47401c0e7f']::uuid[],
+    (array['dine in', 'take away', 'online order']::order_t[])[(1 + floor(random() * 3))::int],
+    date_trunc('month', current_date - interval '1 month')
+        + random() * (now() - date_trunc('month', current_date - interval '1 month'))
+from generate_series(1, 200);
+
+/* --------------------------------------------------------- */
+
+insert into pos_orders_items
+(
+    id_order,
+    id_item,
+    quantity,
+    price_at_order,
+    currency_at_order,
+    status
+)
+select
+    po.id,
+    x.id,
+    x.qty,
+    x.price,
+    x.currency,
+    'completed'
+from pos_orders po
+cross join lateral (
+    select
+        pi.id,
+        pi.price,
+        pi.currency,
+        (1 + floor(random() * 3))::bigint as qty
+    from pos_items pi
+    where pi.id_tenant_branch = po.id_tenant_branch
+    order by random()
+    limit (1 + floor(random() * 3))::int
+) x;
+
+/* --------------------------------------------------------- */
+
+with pending as (
+    select
+        po.id,
+        po.date_created,
+        random() as r
+    from pos_orders po
+    where not exists (
+        select 1 from pos_orders_payments where id_order = po.id
+    )
+)
+insert into pos_orders_payments
+(
+    id_order,
+    total,
+    currency,
+    status,
+    method,
+    paid_at,
+    date_created
+)
+select
+    p.id,
+    coalesce((
+        select sum(quantity * price_at_order)
+        from pos_orders_items
+        where id_order = p.id
+    ), 0),
+    'USD',
+    'paid',
+    case
+        when p.r < 0.35 then 'cash'
+        when p.r < 0.50 then 'debit'
+        when p.r < 0.75 then 'credit'
+        else                  'qr'
+    end::payment_method_t,
+    p.date_created + (random() * interval '10 minutes'),
+    p.date_created
+from pending p;
