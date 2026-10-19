@@ -24,7 +24,7 @@ values
     'Sunrise Cafe',
     '01a14e6f-1b71-79e1-b42c-cfe9c0cbde32'
 )
-on conflict do nothing;;
+on conflict do nothing;
 
 /* --------------------------------------------------------- */
 
@@ -45,7 +45,8 @@ values
     '01a14e70-c4b6-70bb-b65a-899d4a53fc9d',
     '01a14e6f-ab53-74d4-af99-f9e541108ba0',
     'Downtown Branch'
-);
+)
+on conflict do nothing;
 
 /* --------------------------------------------------------- */
 
@@ -74,7 +75,8 @@ values
     'staff',
     'Cashier',
     array['orders']::access_t[]
-);
+)
+on conflict do nothing;
 
 /* --------------------------------------------------------- */
 
@@ -95,4 +97,5 @@ values
     'VAT',
     12.00,
     true
-);
+)
+on conflict do nothing;

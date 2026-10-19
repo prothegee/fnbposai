@@ -144,6 +144,49 @@ __*Project Directory:*__ `containers/postgresql`.
 
 <br>
 
+__*Init Container Entries Dir:*__ `containers/postgres-primary/init`.
+
+<br>
+
+__*Verify Dummies Data:*__
+
+Required to run `make gen-dummies` and make sure the postgres primary and replica is up.<br>
+[See Makefile](./Makefile) for reference command.
+
+```sql
+\pset pager off
+
+select
+    pi.name                         as item_name,
+    poi.quantity,
+    poi.price_at_order,
+    pop.method                      as payment_method,
+    pop.paid_at
+from pos_orders_payments pop
+join pos_orders          po  on po.id        = pop.id_order
+join pos_orders_items    poi on poi.id_order = pop.id_order
+join pos_items           pi  on pi.id        = poi.id_item
+where pop.status = 'paid'
+  and pop.paid_at >= date_trunc('month', current_date - interval '1 month')
+  and pop.paid_at <  now()
+  and po.id_tenant         = '01a14e6f-ab53-74d4-af99-f9e541108ba0'
+  and po.id_tenant_branch  = '01a14e70-c4b6-70bb-b65a-899d4a53fc9d'
+order by pop.paid_at desc;
+
+-- expect 389 rows
+```
+
+```sql
+select method, count(*), sum(total)
+from pos_orders_payments
+group by method
+order by method;
+
+-- expect 4 rows
+```
+
+<br>
+
 __*IMPORTANTS:*__
 
 - Primary for write replica for read.
