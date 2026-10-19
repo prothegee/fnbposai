@@ -13,8 +13,7 @@ do $$
 begin
     begin
     create type weight_t as enum(
-        -- pcs can't be convert for now
-        'ton', 'kg', 'g', 'mg', 'galon', 'L', 'ml', 'pcs'
+        'ton', 'kg', 'g', 'mg', 'gallon', 'L', 'ml'
     );
     exception when duplicate_object then null;
     end;
@@ -50,7 +49,7 @@ create table if not exists pos_items(
     the ammount of _deduct will be reduce from stocks respectively.
     */
     use_sync_stock              boolean             not null default false,
-    thumbnail                   text                not null default '',
+    thumbnail                   text                not null,
     description                 text                null,
     category                    text                null,
     tags                        text[]              null,

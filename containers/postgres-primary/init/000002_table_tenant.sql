@@ -148,9 +148,9 @@ create table if not exists tenant_taxes(
     id                  uuid            primary key default uuidv7(),
     id_tenant           uuid            not null,
     id_tenant_branch    uuid            not null,
-    name_of_tax         text            not null,
-    name_of_tax_display text            not null
-                                        generated always as (lower(name_of_tax)) stored,
+    name_of_tax_display text            not null,
+    name_of_tax         text            not null
+                                        generated always as (lower(name_of_tax_display)) stored,
     percentage          numeric(6,2)    not null,
     -- if true, all tnenat branch pos orders include this tax
     applied_as_default  boolean         not null default false,
