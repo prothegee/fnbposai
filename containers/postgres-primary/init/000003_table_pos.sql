@@ -374,6 +374,7 @@ create table if not exists pos_orders_payments(
     currency            currency_t          not null default 'USD',
     status              payment_t           not null default 'pending',
     method              payment_method_t    not null default 'cash',
+    paid_at             timestamp           null,
     date_created        timestamp           not null default now(),
     last_update         timestamp           null,
 
@@ -382,6 +383,10 @@ create table if not exists pos_orders_payments(
         references pos_orders(id)
         on delete cascade
 );
+
+create index if not exists idx_pos_orders_payments_paid_at
+    on pos_orders_payments(paid_at)
+    where status = 'paid';
 
 /* --------------------------------------------------------- */
 -- POSTONE
