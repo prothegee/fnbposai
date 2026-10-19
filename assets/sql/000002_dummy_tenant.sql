@@ -23,7 +23,8 @@ values
     '01a14e6f-ab53-74d4-af99-f9e541108ba0',
     'Sunrise Cafe',
     '01a14e6f-1b71-79e1-b42c-cfe9c0cbde32'
-);
+)
+on conflict do nothing;;
 
 /* --------------------------------------------------------- */
 
