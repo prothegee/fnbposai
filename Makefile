@@ -209,6 +209,6 @@ kafka-logs: ## Tail kafka logs
 
 ##@ Gen
 
-.PHONY: gen-sql_dummies
-gen-sql_dummies: ## Generate sql dummies for this project
-	go run ./cmd/devtools gen sqldummies
+.PHONY: gen-dummies
+gen-dummies: ## Generate sql dummies for this project
+	go run ./cmd/devtools generate dummies
