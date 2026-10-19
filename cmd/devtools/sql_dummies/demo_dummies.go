@@ -24,6 +24,7 @@ type pgConnection struct {
 var sqlFiles = []string{
 	"assets/sql/000001_dummy_account.sql",
 	"assets/sql/000002_dummy_tenant.sql",
+	"assets/sql/000003_dummy_pos.sql",
 }
 
 // --------------------------------------------------------- //
