@@ -60,7 +60,7 @@ values
 ),
 (
     -- #4
-    '01a15367-835a-7e94-b35f-a0a23b834c65',
+    '01a1537a-3f6e-71bf-8cbe-cffb28bf71be',
     '01a14e6f-ab53-74d4-af99-f9e541108ba0',
     '01a14e70-c4b6-70bb-b65a-899d4a53fc9d',
     'Cheesecake',
