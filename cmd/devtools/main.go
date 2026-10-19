@@ -5,20 +5,22 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/prothegee/fnbposai/cmd/devtools/dummies"
 )
 
 // --------------------------------------------------------- //
 
 func handleGen(args []string) {
 	if len(args) < 1 {
-		fmt.Println("usage: go run cmd/prog/main.go gen <sqldummies|...>")
+		fmt.Println("usage: go run cmd/prog/main.go gen <dummies|...>")
 		return
 	}
 
 	switch args[0] {
-	case "sqldummies":
-		if confirm("WARNING: Generate SQL dummies for this project?") {
-			GenSqlDummies()
+	case "dummies":
+		if confirm("WARNING: Generate data dummies for this project?") {
+			dummies.GenerateDemoDummies()
 		}
 	default:
 		fmt.Printf("unknown gen target: %q\n", args[0])
