@@ -13,8 +13,7 @@ do $$
 begin
     begin
     create type weight_t as enum(
-        -- pcs can't be convert for now
-        'ton', 'kg', 'g', 'mg', 'galon', 'L', 'ml', 'pcs'
+        'ton', 'kg', 'g', 'mg', 'galon', 'L', 'ml'
     );
     exception when duplicate_object then null;
     end;
