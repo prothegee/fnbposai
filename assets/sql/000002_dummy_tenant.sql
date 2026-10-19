@@ -74,3 +74,24 @@ values
     'Cashier',
     array['orders']::access_t[]
 );
+
+/* --------------------------------------------------------- */
+
+insert into tenant_taxes
+(
+    id,
+    id_tenant,
+    id_tenant_branch,
+    name_of_tax_display,
+    percentage,
+    applied_as_default
+)
+values
+(
+    '01a15307-7dc6-70d3-aea9-ec47401c0e7f', 
+    '01a14e6f-ab53-74d4-af99-f9e541108ba0',
+    '01a14e70-c4b6-70bb-b65a-899d4a53fc9d',
+    'VAT',
+    12.00,
+    true
+);
