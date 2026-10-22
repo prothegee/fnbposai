@@ -292,8 +292,8 @@ flowchart LR
         +
         L1 Cache LRU 1-6s"}}
 
-    PostgresPrimary[("PostgresSQL Primary")]
-    PostgresReplica[("PostgresSQL Replica")]
+    PostgresPrimary[("PostgresSQL Primary: READ")]
+    PostgresReplica[("PostgresSQL Replica: WRITE")]
     Redis[("Redis as L2 Cache N minutes")]
 
     Kafka["Kafka"]
@@ -316,9 +316,14 @@ flowchart LR
         POS
     end
 
-    subgraph Databases["Databases"]
+    subgraph PgGRPC["PostgreSQL group:
+    2 instances same machine different purpose"]
         PostgresPrimary
         PostgresReplica
+    end
+
+    subgraph Databases["Databases"]
+        PgGRPC
         Redis
     end
 
@@ -340,6 +345,7 @@ flowchart LR
 
     subgraph Internal["Internal"]
         Services
+        PgGRPC
         Databases
         Streams
         AIs
@@ -356,12 +362,12 @@ flowchart LR
     Gateway <-.-> |"REST"| LlamaCppServer
     Gateway <-.-> |"REST"| StableDiffusionServer
 
-    Account -.- |"READ for lag-tolerant only"| PostgresReplica
+    Account -.- |"READ"| PostgresReplica
     Account -.- |"WRITE"| PostgresPrimary
     Account -.- |"READ/WRITE"| Redis
     Account -.-> |"gRPC"| Media
 
-    Tenant -.- |"READ for lag-tolerant only"| PostgresReplica
+    Tenant -.- |"READ"| PostgresReplica
     Tenant -.- |"WRITE"| PostgresPrimary
     Tenant -.- |"READ/WRITE"| Redis
     Tenant -.-> |"gRPC"| Media
