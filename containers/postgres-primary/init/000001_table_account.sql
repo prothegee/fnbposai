@@ -7,6 +7,10 @@ create table if not exists account(
     -- see `account_set_username`
     username        text        unique not null,
     password        text        not null,
+    -- -- single sign in: postpone
+    -- single_sign_in  boolean     not null default false,
+    -- signed_in       boolean     null,
+    -- last_signed_in  timestamp   null,
     pub_path        text        unique not null
                                 generated always as
                                 ('a/' || replace(id::text, '-', '') || '/') stored,
