@@ -178,7 +178,8 @@ Required to run `make gen-dummies` and make sure the postgres primary and replic
 [See Makefile](./Makefile) for reference command.
 
 ```sql
-\pset pager off
+\x on;
+\pset pager off;
 
 select
     pi.name                         as item_name,
@@ -209,11 +210,12 @@ order by method;
 
 __*IMPORTANTS:*__
 
-- Primary for write replica for read.
 - All database initialization happen on the the database.
+- Primary for write replica for read (same instance server).
 - Don't add complexity handle initialize from backend service/s.
 - Never use `select * ...`. Limit your query, pick what's important.
 - All service/s that interact with database handle the logic and type checking only.
+- If ORM block you, use raw query within the same libray (i.e. GORM has capability to use raw query too).
 
 <br>
 
@@ -273,7 +275,7 @@ PORTS: [9032].
 
 ```mermaid
 flowchart LR
-    msg@{ shape: braces, label: "Load Balancer (L4) or Reverse Proxies (L7) exlcuded" }
+    msg@{ shape: braces, label: "Load Balancer (L4) or Reverse Proxies (L7) are exlcuded" }
 
     Browser["Browser"]
     Mobile["Mobile"]
@@ -372,7 +374,7 @@ flowchart LR
     Tenant -.- |"READ/WRITE"| Redis
     Tenant -.-> |"gRPC"| Media
 
-    POS -.- |"READ for lag-tolerant only"| PostgresReplica
+    POS -.- |"READ"| PostgresReplica
     POS -.- |"WRITE"| PostgresPrimary
     POS -.- |"READ/WRITE"| Redis
     POS -.-> |"gRPC"| Media
@@ -404,7 +406,7 @@ __*NOTES:*__
 flowchart TD
     App[Application Instance] -->|1. Check L1| L1[In-Process Cache<br>TTL: 1-6 seconds]
     L1 -->|Hit| Return[Return Data]
-    L1 -->|Miss| L2[Redis L2 Cache<br>TTL: 5-30 minutes]
+    L1 -->|Miss| L2[Redis L2 Cache<br>TTL: 1-30 minutes. Depend on situations]
     L2 -->|Hit| Return
     L2 -->|Miss| DB[PostgreSQL Primary]
     DB --> L2

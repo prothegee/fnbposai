@@ -1,0 +1,441 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <style>
+      text { font-family: 'Inter','Segoe UI',system-ui,-apple-system,sans-serif; }
+    </style>
+    <clipPath id="avatarClip"><circle cx="1390" cy="40" r="20"/></clipPath>
+    <clipPath id="imgClip"><rect x="8" y="8" width="204" height="82" rx="8"/></clipPath>
+    <g id="cardbg">
+      <rect x="0" y="0" width="220" height="150" rx="12" fill="#111827" stroke="#1e293b"/>
+      <rect x="8" y="8" width="204" height="82" rx="8" fill="#0f172a"/>
+      <g clip-path="url(#imgClip)">
+        <circle cx="34" cy="32" r="7" fill="#334155"/>
+        <path d="M8 92 L62 46 L94 72 L130 48 L212 92 Z" fill="#334155"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect x="0" y="0" width="1440" height="900" fill="#0b1220"/>
+
+  <!-- ============ TOP BAR ============ -->
+  <rect x="0" y="0" width="1440" height="80" fill="#111827"/>
+  <line x1="0" y1="80" x2="1440" y2="80" stroke="#1e293b" stroke-width="1"/>
+
+  <rect x="20" y="20" width="44" height="44" rx="10" fill="#172554" stroke="#1e40af"/>
+  <circle cx="33" cy="32" r="3.2" fill="#60a5fa"/>
+  <path d="M28 54 L37 43 L43 50 L47 45 L56 54 Z" fill="#3b82f6"/>
+
+  <line x1="78" y1="22" x2="78" y2="58" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <text x="94" y="38" font-size="15" font-weight="600" fill="#f1f5f9">Sunrise Café</text>
+  <rect x="94" y="46" width="168" height="24" rx="12" fill="#1e293b" stroke="#334155"/>
+  <text x="107" y="62" font-size="11.5" fill="#94a3b8">Downtown Branch</text>
+  <text x="246" y="63" font-size="10" fill="#64748b">▾</text>
+
+  <line x1="290" y1="22" x2="290" y2="58" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <circle cx="320" cy="38" r="11" fill="#052e16" stroke="#166534"/>
+  <circle cx="320" cy="38" r="4" fill="#22c55e"/>
+  <text x="340" y="36" font-size="13" font-weight="700" fill="#4ade80">Shift Open</text>
+  <text x="340" y="52" font-size="10" fill="#64748b">3h 42m · jdoe</text>
+  <text x="430" y="45" font-size="9" fill="#64748b">▾</text>
+
+  <line x1="460" y1="22" x2="460" y2="58" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <circle cx="490" cy="38" r="11" fill="#052e16" stroke="#166534"/>
+  <circle cx="490" cy="38" r="4" fill="#22c55e"/>
+  <text x="510" y="36" font-size="14" font-weight="700" fill="#4ade80">Online</text>
+  <text x="510" y="52" font-size="10" fill="#64748b">Connection</text>
+
+  <circle cx="595" cy="38" r="11" fill="#1e293b" stroke="#334155"/>
+  <circle cx="595" cy="38" r="3.5" fill="#94a3b8"/>
+  <text x="615" y="36" font-size="14" font-weight="700" fill="#f1f5f9">128</text>
+  <text x="615" y="52" font-size="10" fill="#64748b">Orders Today</text>
+
+  <circle cx="700" cy="38" r="11" fill="#1e293b" stroke="#334155"/>
+  <circle cx="700" cy="38" r="3.5" fill="#94a3b8"/>
+  <text x="720" y="36" font-size="14" font-weight="700" fill="#f1f5f9">12</text>
+  <text x="720" y="52" font-size="10" fill="#64748b">Pending</text>
+
+  <circle cx="805" cy="38" r="11" fill="#1e293b" stroke="#334155"/>
+  <circle cx="805" cy="38" r="3.5" fill="#94a3b8"/>
+  <text x="825" y="36" font-size="14" font-weight="700" fill="#f1f5f9">7</text>
+  <text x="825" y="52" font-size="10" fill="#64748b">Processing</text>
+
+  <circle cx="910" cy="38" r="11" fill="#422006" stroke="#78350f"/>
+  <circle cx="910" cy="38" r="3.5" fill="#f59e0b"/>
+  <text x="930" y="36" font-size="14" font-weight="700" fill="#f1f5f9">3</text>
+  <text x="930" y="52" font-size="10" fill="#64748b">Ready</text>
+
+  <circle cx="1015" cy="38" r="11" fill="#1e293b" stroke="#334155"/>
+  <circle cx="1015" cy="38" r="3.5" fill="#94a3b8"/>
+  <text x="1035" y="36" font-size="14" font-weight="700" fill="#f1f5f9">5</text>
+  <text x="1035" y="52" font-size="10" fill="#64748b">Open Bill</text>
+
+  <circle cx="1120" cy="38" r="11" fill="#1e293b" stroke="#334155"/>
+  <circle cx="1120" cy="38" r="3.5" fill="#94a3b8"/>
+  <text x="1140" y="36" font-size="14" font-weight="700" fill="#f1f5f9">94/6</text>
+  <text x="1140" y="52" font-size="10" fill="#64748b">Completed/Paid</text>
+
+  <text x="1340" y="36" font-size="13" font-weight="600" fill="#f1f5f9" text-anchor="end">jdoe</text>
+  <text x="1340" y="53" font-size="10.5" fill="#94a3b8" text-anchor="end">Cashier</text>
+  <line x1="1352" y1="22" x2="1352" y2="58" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+  <circle cx="1390" cy="40" r="20" fill="#1e293b" stroke="#334155"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="1390" cy="34" r="7" fill="#64748b"/>
+    <circle cx="1390" cy="59" r="14" fill="#64748b"/>
+  </g>
+
+  <!-- ============ LEFT SIDEBAR ============ -->
+  <rect x="0" y="80" width="210" height="820" fill="#111827"/>
+  <line x1="210" y1="80" x2="210" y2="900" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="20" y="104" font-size="9" font-weight="700" fill="#475569" letter-spacing="1.2">MENU</text>
+  <circle cx="188" cy="100" r="10" fill="#1e293b" stroke="#334155"/>
+  <text x="188" y="104" font-size="10" fill="#94a3b8" text-anchor="middle">«</text>
+
+  <rect x="20" y="132" width="18" height="18" rx="5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="26" cy="138" r="1.7" fill="#64748b"/>
+  <circle cx="32" cy="138" r="1.7" fill="#64748b"/>
+  <circle cx="26" cy="144" r="1.7" fill="#64748b"/>
+  <circle cx="32" cy="144" r="1.7" fill="#64748b"/>
+  <text x="50" y="145" font-size="12.5" fill="#cbd5e1">Items</text>
+
+  <rect x="12" y="171" width="186" height="32" rx="8" fill="#172554"/>
+  <rect x="20" y="178" width="18" height="18" rx="5" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="24" y1="183" x2="34" y2="183" stroke="#3b82f6" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="24" y1="187" x2="34" y2="187" stroke="#3b82f6" stroke-width="1.4" stroke-linecap="round"/>
+  <line x1="24" y1="191" x2="30" y2="191" stroke="#3b82f6" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="191" font-size="12.5" font-weight="600" fill="#60a5fa">Order</text>
+
+  <rect x="20" y="224" width="18" height="18" rx="5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="25" y1="239" x2="25" y2="233" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="239" x2="30" y2="228" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="35" y1="239" x2="35" y2="231" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+  <text x="50" y="237" font-size="12.5" fill="#cbd5e1">Sales</text>
+
+  <rect x="20" y="270" width="18" height="18" rx="5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M23 279 L29 273 L35 279" fill="none" stroke="#64748b" stroke-width="1.4" stroke-linejoin="round"/>
+  <rect x="25" y="279" width="8" height="7" fill="none" stroke="#64748b" stroke-width="1.4"/>
+  <text x="50" y="283" font-size="12.5" fill="#cbd5e1">Tenant</text>
+
+  <rect x="20" y="316" width="18" height="18" rx="5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="24" y="322" width="10" height="9" rx="1.5" fill="none" stroke="#64748b" stroke-width="1.4"/>
+  <line x1="24" y1="326" x2="34" y2="326" stroke="#64748b" stroke-width="1.4"/>
+  <text x="50" y="329" font-size="12.5" fill="#cbd5e1">Stocks</text>
+
+  <rect x="20" y="362" width="18" height="18" rx="5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="24" y="366" width="10" height="8" rx="1.5" fill="none" stroke="#64748b" stroke-width="1.4"/>
+  <line x1="29" y1="374" x2="29" y2="377" stroke="#64748b" stroke-width="1.4"/>
+  <line x1="26" y1="378" x2="32" y2="378" stroke="#64748b" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="375" font-size="12.5" fill="#cbd5e1">Monitor</text>
+  <text x="188" y="376" font-size="9" fill="#64748b" text-anchor="middle">▾</text>
+
+  <line x1="32" y1="394" x2="32" y2="440" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="32" cy="414" r="3" fill="#475569"/>
+  <text x="46" y="411" font-size="12" fill="#94a3b8">Orders in &amp; out</text>
+  <text x="46" y="427" font-size="9.5" fill="#64748b">Kitchen &amp; Bar</text>
+
+  <line x1="16" y1="820" x2="194" y2="820" stroke="#1e293b" stroke-width="1"/>
+  <rect x="20" y="841" width="18" height="18" rx="5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M30 845 L30 855 M30 845 L36 845 M30 855 L36 855 M33 850 L38 850" fill="none" stroke="#64748b" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="50" y="854" font-size="12.5" fill="#cbd5e1">Sign out</text>
+
+  <!-- ============ CENTER TOP BAND ============ -->
+  <rect x="210" y="80" width="950" height="110" fill="#111827"/>
+  <line x1="210" y1="190" x2="1160" y2="190" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="222" y="100" font-size="9" font-weight="700" fill="#475569" letter-spacing="1.2">ITEM TAGS</text>
+
+  <rect x="222" y="110" width="46" height="28" rx="14" fill="#3b82f6"/>
+  <text x="235" y="128" font-size="11" fill="#ffffff">All</text>
+  <rect x="276" y="110" width="64" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="289" y="128" font-size="11" fill="#cbd5e1">Coffee</text>
+  <rect x="348" y="110" width="46" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="361" y="128" font-size="11" fill="#cbd5e1">Tea</text>
+  <rect x="402" y="110" width="86" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="415" y="128" font-size="11" fill="#cbd5e1">Cold Drinks</text>
+  <rect x="496" y="110" width="62" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="509" y="128" font-size="11" fill="#cbd5e1">Bakery</text>
+  <rect x="566" y="110" width="62" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="579" y="128" font-size="11" fill="#cbd5e1">Snacks</text>
+  <rect x="636" y="110" width="72" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="649" y="128" font-size="11" fill="#cbd5e1">Desserts</text>
+
+  <rect x="222" y="146" width="92" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="235" y="164" font-size="11" fill="#cbd5e1">Main Course</text>
+  <rect x="322" y="146" width="62" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="335" y="164" font-size="11" fill="#cbd5e1">Combo</text>
+  <rect x="392" y="146" width="72" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="405" y="164" font-size="11" fill="#cbd5e1">Add-ons</text>
+  <rect x="472" y="146" width="72" height="28" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="485" y="164" font-size="11" fill="#cbd5e1">Seasonal</text>
+
+  <!-- Selected order selector -->
+  <line x1="840" y1="88" x2="840" y2="182" stroke="#1e293b" stroke-width="1"/>
+  <text x="854" y="100" font-size="9" font-weight="700" fill="#475569" letter-spacing="1.2">CURRENT ORDER</text>
+
+  <rect x="854" y="110" width="296" height="44" rx="10" fill="#0f172a" stroke="#334155"/>
+  <circle cx="876" cy="132" r="11" fill="#334155"/>
+  <text x="894" y="128" font-size="12" font-weight="600" fill="#f1f5f9">Order #1042</text>
+  <text x="894" y="144" font-size="10" fill="#94a3b8">Table 5 · John Deer</text>
+  <text x="1132" y="137" font-size="11" fill="#94a3b8">▾</text>
+
+  <text x="854" y="172" font-size="9.5" fill="#64748b" font-style="italic">click to switch active order (non-paid only)</text>
+
+  <!-- ============ CENTER ITEM GRID ============ -->
+  <rect x="210" y="190" width="950" height="710" fill="#0b1220"/>
+
+  <use href="#cardbg" x="224" y="210"/>
+  <text x="240" y="324" font-size="12.5" font-weight="600" fill="#f1f5f9">Cappuccino</text>
+  <text x="240" y="343" font-size="11" fill="#94a3b8">$3.50</text>
+
+  <use href="#cardbg" x="458" y="210"/>
+  <text x="474" y="324" font-size="12.5" font-weight="600" fill="#f1f5f9">Latte</text>
+  <text x="474" y="343" font-size="11" fill="#94a3b8">$3.80</text>
+
+  <use href="#cardbg" x="692" y="210"/>
+  <text x="708" y="324" font-size="12.5" font-weight="600" fill="#f1f5f9">Espresso</text>
+  <text x="708" y="343" font-size="11" fill="#94a3b8">$2.50</text>
+
+  <use href="#cardbg" x="926" y="210"/>
+  <text x="942" y="324" font-size="12.5" font-weight="600" fill="#f1f5f9">Flat White</text>
+  <text x="942" y="343" font-size="11" fill="#94a3b8">$4.00</text>
+
+  <use href="#cardbg" x="224" y="376"/>
+  <text x="240" y="490" font-size="12.5" font-weight="600" fill="#f1f5f9">Green Tea</text>
+  <text x="240" y="509" font-size="11" fill="#94a3b8">$2.80</text>
+
+  <use href="#cardbg" x="458" y="376"/>
+  <text x="474" y="490" font-size="12.5" font-weight="600" fill="#f1f5f9">Iced Americano</text>
+  <text x="474" y="509" font-size="11" fill="#94a3b8">$3.20</text>
+
+  <use href="#cardbg" x="692" y="376"/>
+  <text x="708" y="490" font-size="12.5" font-weight="600" fill="#f1f5f9">Croissant</text>
+  <text x="708" y="509" font-size="11" fill="#94a3b8">$2.20</text>
+
+  <use href="#cardbg" x="926" y="376"/>
+  <text x="942" y="490" font-size="12.5" font-weight="600" fill="#f1f5f9">Blueberry Muffin</text>
+  <text x="942" y="509" font-size="11" fill="#94a3b8">$3.10</text>
+
+  <use href="#cardbg" x="224" y="542"/>
+  <text x="240" y="656" font-size="12.5" font-weight="600" fill="#f1f5f9">Cheesecake</text>
+  <text x="240" y="675" font-size="11" fill="#94a3b8">$4.50</text>
+
+  <use href="#cardbg" x="458" y="542"/>
+  <text x="474" y="656" font-size="12.5" font-weight="600" fill="#f1f5f9">Club Sandwich</text>
+  <text x="474" y="675" font-size="11" fill="#94a3b8">$6.90</text>
+
+  <use href="#cardbg" x="692" y="542"/>
+  <text x="708" y="656" font-size="12.5" font-weight="600" fill="#f1f5f9">Caesar Salad</text>
+  <text x="708" y="675" font-size="11" fill="#94a3b8">$7.20</text>
+
+  <use href="#cardbg" x="926" y="542"/>
+  <text x="942" y="656" font-size="12.5" font-weight="600" fill="#f1f5f9">Beef Burger</text>
+  <text x="942" y="675" font-size="11" fill="#94a3b8">$8.50</text>
+
+  <g opacity="0.42">
+    <use href="#cardbg" x="224" y="708"/>
+    <text x="240" y="822" font-size="12.5" font-weight="600" fill="#f1f5f9">French Fries</text>
+    <text x="240" y="841" font-size="11" fill="#94a3b8">$3.40</text>
+
+    <use href="#cardbg" x="458" y="708"/>
+    <text x="474" y="822" font-size="12.5" font-weight="600" fill="#f1f5f9">Chicken Wings</text>
+    <text x="474" y="841" font-size="11" fill="#94a3b8">$6.20</text>
+
+    <use href="#cardbg" x="692" y="708"/>
+    <text x="708" y="822" font-size="12.5" font-weight="600" fill="#f1f5f9">Orange Juice</text>
+    <text x="708" y="841" font-size="11" fill="#94a3b8">$3.60</text>
+
+    <use href="#cardbg" x="926" y="708"/>
+    <text x="942" y="822" font-size="12.5" font-weight="600" fill="#f1f5f9">Sparkling Water</text>
+    <text x="942" y="841" font-size="11" fill="#94a3b8">$2.00</text>
+  </g>
+
+  <circle cx="620" cy="876" r="7" fill="none" stroke="#1e293b" stroke-width="2.5"/>
+  <path d="M620 869 A7 7 0 0 1 627 876" fill="none" stroke="#64748b" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="635" y="880" font-size="11" fill="#64748b">Loading more items…</text>
+
+  <!-- ============ RIGHT SIDEBAR ============ -->
+  <rect x="1160" y="80" width="280" height="820" fill="#111827"/>
+  <line x1="1160" y1="80" x2="1160" y2="900" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="1176" y="102" font-size="9" font-weight="700" fill="#475569" letter-spacing="1.2">ACTIVE ORDER</text>
+  <text x="1176" y="124" font-size="13" font-weight="700" fill="#f1f5f9">Order #1042</text>
+  <text x="1176" y="139" font-size="10" fill="#94a3b8">Table 5 · John Deer</text>
+  <circle cx="1420" cy="102" r="10" fill="#1e293b" stroke="#334155"/>
+  <text x="1420" y="106" font-size="10" fill="#94a3b8" text-anchor="middle">»</text>
+  <line x1="1176" y1="152" x2="1424" y2="152" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Selection action bar -->
+  <rect x="1160" y="160" width="280" height="40" fill="#172554"/>
+  <text x="1176" y="184" font-size="11.5" font-weight="600" fill="#93c5fd">2 items selected</text>
+  <rect x="1310" y="170" width="100" height="22" rx="11" fill="#111827" stroke="#1e40af"/>
+  <text x="1360" y="185" font-size="10.5" font-weight="600" fill="#60a5fa" text-anchor="middle">Actions ▾</text>
+  <circle cx="1424" cy="181" r="10" fill="#111827" stroke="#1e40af"/>
+  <text x="1424" y="185" font-size="10" font-weight="600" fill="#60a5fa" text-anchor="middle">✕</text>
+
+  <line x1="1160" y1="200" x2="1440" y2="200" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ============ ITEMS LIST (SCROLLABLE) ============ -->
+
+  <!-- Row 1: Cappuccino · Processing · CHECKED -->
+  <rect x="1160" y="200" width="280" height="62" fill="#0f172a"/>
+  <rect x="1176" y="221" width="16" height="16" rx="4" fill="#3b82f6"/>
+  <path d="M1180 229 L1183 232 L1189 225" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1200" y="226" font-size="12" font-weight="300" fill="#f1f5f9">Cappuccino</text>
+  <rect x="1200" y="232" width="72" height="16" rx="8" fill="#172554"/>
+  <circle cx="1209" cy="240" r="2.5" fill="#3b82f6"/>
+  <text x="1215" y="244" font-size="9" font-weight="500" fill="#93c5fd">Processing</text>
+  <text x="1424" y="226" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$7.00</text>
+  <!-- Qty: Trash / − / 2 / + -->
+  <rect x="1352" y="232" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 236 L1363 236 M1358 236 L1358.5 243 L1361.5 243 L1362 236 M1359 234.5 L1361 234.5 L1361 236 L1359 236 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="232" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="245" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="245" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">2</text>
+  <rect x="1408" y="232" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="245" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+  <line x1="1160" y1="262" x2="1440" y2="262" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 2: Latte · Processing · CHECKED -->
+  <rect x="1160" y="262" width="280" height="62" fill="#0f172a"/>
+  <rect x="1176" y="283" width="16" height="16" rx="4" fill="#3b82f6"/>
+  <path d="M1180 291 L1183 294 L1189 287" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1200" y="288" font-size="12" font-weight="300" fill="#f1f5f9">Latte</text>
+  <rect x="1200" y="294" width="72" height="16" rx="8" fill="#172554"/>
+  <circle cx="1209" cy="302" r="2.5" fill="#3b82f6"/>
+  <text x="1215" y="306" font-size="9" font-weight="500" fill="#93c5fd">Processing</text>
+  <text x="1424" y="288" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$3.80</text>
+  <rect x="1352" y="294" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 298 L1363 298 M1358 298 L1358.5 305 L1361.5 305 L1362 298 M1359 296.5 L1361 296.5 L1361 298 L1359 298 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="294" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="307" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="307" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">1</text>
+  <rect x="1408" y="294" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="307" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+  <line x1="1160" y1="324" x2="1440" y2="324" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 3: Croissant · Ready -->
+  <rect x="1160" y="324" width="280" height="62" fill="#111827"/>
+  <rect x="1176" y="345" width="16" height="16" rx="4" fill="#0f172a" stroke="#334155"/>
+  <text x="1200" y="350" font-size="12" font-weight="300" fill="#f1f5f9">Croissant</text>
+  <rect x="1200" y="356" width="50" height="16" rx="8" fill="#422006"/>
+  <circle cx="1209" cy="364" r="2.5" fill="#f59e0b"/>
+  <text x="1215" y="368" font-size="9" font-weight="500" fill="#fbbf24">Ready</text>
+  <text x="1424" y="350" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$4.40</text>
+  <rect x="1352" y="356" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 360 L1363 360 M1358 360 L1358.5 367 L1361.5 367 L1362 360 M1359 358.5 L1361 358.5 L1361 360 L1359 360 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="356" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="369" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="369" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">2</text>
+  <rect x="1408" y="356" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="369" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+  <line x1="1160" y1="386" x2="1440" y2="386" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 4: Cheesecake · Pending -->
+  <rect x="1160" y="386" width="280" height="62" fill="#111827"/>
+  <rect x="1176" y="407" width="16" height="16" rx="4" fill="#0f172a" stroke="#334155"/>
+  <text x="1200" y="412" font-size="12" font-weight="300" fill="#f1f5f9">Cheesecake</text>
+  <rect x="1200" y="418" width="56" height="16" rx="8" fill="#1e293b"/>
+  <circle cx="1209" cy="426" r="2.5" fill="#64748b"/>
+  <text x="1215" y="430" font-size="9" font-weight="500" fill="#94a3b8">Pending</text>
+  <text x="1424" y="412" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$4.50</text>
+  <rect x="1352" y="418" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 422 L1363 422 M1358 422 L1358.5 429 L1361.5 429 L1362 422 M1359 420.5 L1361 420.5 L1361 422 L1359 422 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="418" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="431" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="431" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">1</text>
+  <rect x="1408" y="418" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="431" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+  <line x1="1160" y1="448" x2="1440" y2="448" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 5: Club Sandwich · Pending -->
+  <rect x="1160" y="448" width="280" height="62" fill="#111827"/>
+  <rect x="1176" y="469" width="16" height="16" rx="4" fill="#0f172a" stroke="#334155"/>
+  <text x="1200" y="474" font-size="12" font-weight="300" fill="#f1f5f9">Club Sandwich</text>
+  <rect x="1200" y="480" width="56" height="16" rx="8" fill="#1e293b"/>
+  <circle cx="1209" cy="488" r="2.5" fill="#64748b"/>
+  <text x="1215" y="492" font-size="9" font-weight="500" fill="#94a3b8">Pending</text>
+  <text x="1424" y="474" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$6.90</text>
+  <rect x="1352" y="480" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 484 L1363 484 M1358 484 L1358.5 491 L1361.5 491 L1362 484 M1359 482.5 L1361 482.5 L1361 484 L1359 484 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="480" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="493" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="493" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">1</text>
+  <rect x="1408" y="480" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="493" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+  <line x1="1160" y1="510" x2="1440" y2="510" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 6: Orange Juice · Ready -->
+  <rect x="1160" y="510" width="280" height="62" fill="#111827"/>
+  <rect x="1176" y="531" width="16" height="16" rx="4" fill="#0f172a" stroke="#334155"/>
+  <text x="1200" y="536" font-size="12" font-weight="300" fill="#f1f5f9">Orange Juice</text>
+  <rect x="1200" y="542" width="50" height="16" rx="8" fill="#422006"/>
+  <circle cx="1209" cy="550" r="2.5" fill="#f59e0b"/>
+  <text x="1215" y="554" font-size="9" font-weight="500" fill="#fbbf24">Ready</text>
+  <text x="1424" y="536" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$3.60</text>
+  <rect x="1352" y="542" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 546 L1363 546 M1358 546 L1358.5 553 L1361.5 553 L1362 546 M1359 544.5 L1361 544.5 L1361 546 L1359 546 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="542" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="555" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="555" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">1</text>
+  <rect x="1408" y="542" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="555" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+  <line x1="1160" y1="572" x2="1440" y2="572" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 7: French Fries · Ready -->
+  <rect x="1160" y="572" width="280" height="62" fill="#111827"/>
+  <rect x="1176" y="593" width="16" height="16" rx="4" fill="#0f172a" stroke="#334155"/>
+  <text x="1200" y="598" font-size="12" font-weight="300" fill="#f1f5f9">French Fries</text>
+  <rect x="1200" y="604" width="50" height="16" rx="8" fill="#422006"/>
+  <circle cx="1209" cy="612" r="2.5" fill="#f59e0b"/>
+  <text x="1215" y="616" font-size="9" font-weight="500" fill="#fbbf24">Ready</text>
+  <text x="1424" y="598" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$3.40</text>
+  <rect x="1352" y="604" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 608 L1363 608 M1358 608 L1358.5 615 L1361.5 615 L1362 608 M1359 606.5 L1361 606.5 L1361 608 L1359 608 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="604" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="617" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="617" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">1</text>
+  <rect x="1408" y="604" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="617" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+  <line x1="1160" y1="634" x2="1440" y2="634" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Row 8: Green Tea · Pending -->
+  <rect x="1160" y="634" width="280" height="62" fill="#111827"/>
+  <rect x="1176" y="655" width="16" height="16" rx="4" fill="#0f172a" stroke="#334155"/>
+  <text x="1200" y="660" font-size="12" font-weight="300" fill="#f1f5f9">Green Tea</text>
+  <rect x="1200" y="666" width="56" height="16" rx="8" fill="#1e293b"/>
+  <circle cx="1209" cy="674" r="2.5" fill="#64748b"/>
+  <text x="1215" y="678" font-size="9" font-weight="500" fill="#94a3b8">Pending</text>
+  <text x="1424" y="660" font-size="12" font-weight="300" fill="#f1f5f9" text-anchor="end">$5.60</text>
+  <rect x="1352" y="666" width="16" height="16" rx="4" fill="#1c0f11" stroke="#7f1d1d"/>
+  <path d="M1357 670 L1363 670 M1358 670 L1358.5 677 L1361.5 677 L1362 670 M1359 668.5 L1361 668.5 L1361 670 L1359 670 Z" stroke="#f87171" stroke-width="1.1" fill="none" stroke-linejoin="round"/>
+  <rect x="1376" y="666" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1384" y="679" font-size="12" fill="#cbd5e1" text-anchor="middle">−</text>
+  <text x="1397" y="679" font-size="11" font-weight="300" fill="#f1f5f9" text-anchor="middle">2</text>
+  <rect x="1408" y="666" width="16" height="16" rx="4" fill="#1e293b" stroke="#334155"/>
+  <text x="1416" y="679" font-size="12" fill="#cbd5e1" text-anchor="middle">+</text>
+
+  <!-- Scrollbar -->
+  <rect x="1430" y="208" width="6" height="478" rx="3" fill="#1e293b"/>
+  <rect x="1430" y="208" width="6" height="220" rx="3" fill="#475569"/>
+
+  <!-- ============ PINNED BOTTOM ============ -->
+  <line x1="1160" y1="700" x2="1440" y2="700" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="1176" y="730" font-size="11.5" fill="#94a3b8">Subtotal</text>
+  <text x="1424" y="730" font-size="11.5" fill="#cbd5e1" text-anchor="end">60.00</text>
+
+  <text x="1176" y="754" font-size="11.5" fill="#94a3b8">Tax (10%)</text>
+  <text x="1424" y="754" font-size="11.5" fill="#cbd5e1" text-anchor="end">6.00</text>
+
+  <line x1="1176" y1="774" x2="1424" y2="774" stroke="#334155" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <text x="1176" y="802" font-size="13" font-weight="700" fill="#f1f5f9">Total</text>
+  <text x="1424" y="802" font-size="15" font-weight="700" fill="#f1f5f9" text-anchor="end">66.00</text>
+
+  <rect x="1176" y="820" width="248" height="40" rx="9" fill="#3b82f6"/>
+  <text x="1300" y="845" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Pay</text>
+</svg>

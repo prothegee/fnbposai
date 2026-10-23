@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <style>text { font-family: 'Inter','Segoe UI',system-ui,-apple-system,sans-serif; }</style>
+    <filter id="modalShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="40" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="avatarClip"><circle cx="1390" cy="40" r="20"/></clipPath>
+  </defs>
+
+  <rect x="0" y="0" width="1440" height="900" fill="#020617" opacity="0.7"/>
+
+  <!-- Modal -->
+  <rect x="440" y="100" width="560" height="700" rx="16" fill="#111827" filter="url(#modalShadow)"/>
+
+  <!-- HEADER -->
+  <rect x="480" y="138" width="56" height="56" rx="10" fill="#1e293b" stroke="#334155"/>
+  <rect x="496" y="156" width="24" height="20" rx="2" fill="none" stroke="#64748b" stroke-width="2"/>
+  <line x1="496" y1="164" x2="520" y2="164" stroke="#64748b" stroke-width="2"/>
+
+  <text x="556" y="160" font-size="17" font-weight="700" fill="#f1f5f9">Espresso Beans</text>
+  <text x="556" y="178" font-size="11.5" fill="#94a3b8">Coffee</text>
+
+  <!-- Status pill -->
+  <rect x="886" y="150" width="80" height="22" rx="11" fill="#052e16"/>
+  <circle cx="901" cy="161" r="3.5" fill="#22c55e"/>
+  <text x="912" y="165" font-size="10" font-weight="500" fill="#4ade80">Normal</text>
+
+  <!-- Close -->
+  <circle cx="984" cy="160" r="12" fill="#1e293b" stroke="#334155"/>
+  <text x="984" y="164" font-size="11" fill="#94a3b8" text-anchor="middle">✕</text>
+
+  <line x1="440" y1="208" x2="1000" y2="208" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- SECTION : QUANTITY -->
+  <text x="480" y="238" font-size="10.5" font-weight="700" fill="#475569" letter-spacing="1.2">QUANTITY &amp; STOCK</text>
+
+  <rect x="480" y="250" width="230" height="72" rx="10" fill="#0f172a" stroke="#1e293b"/>
+  <text x="496" y="272" font-size="10" font-weight="600" fill="#94a3b8" letter-spacing="0.4">QUANTITY</text>
+  <text x="496" y="302" font-size="22" font-weight="700" fill="#4ade80">24</text>
+  <text x="538" y="302" font-size="12" fill="#94a3b8">units</text>
+
+  <rect x="730" y="250" width="230" height="72" rx="10" fill="#0f172a" stroke="#1e293b"/>
+  <text x="746" y="272" font-size="10" font-weight="600" fill="#94a3b8" letter-spacing="0.4">WARNING QTY</text>
+  <text x="746" y="302" font-size="22" font-weight="700" fill="#f1f5f9">10</text>
+  <text x="788" y="302" font-size="12" fill="#94a3b8">units</text>
+
+  <!-- SECTION : WEIGHT -->
+  <text x="480" y="352" font-size="10.5" font-weight="700" fill="#475569" letter-spacing="1.2">WEIGHT</text>
+
+  <rect x="480" y="364" width="230" height="72" rx="10" fill="#0f172a" stroke="#1e293b"/>
+  <text x="496" y="386" font-size="10" font-weight="600" fill="#94a3b8" letter-spacing="0.4">WEIGHT PER UNIT</text>
+  <text x="496" y="416" font-size="18" font-weight="700" fill="#f1f5f9">1.00</text>
+  <text x="546" y="416" font-size="12" fill="#94a3b8">kg</text>
+
+  <rect x="730" y="364" width="230" height="72" rx="10" fill="#0f172a" stroke="#1e293b"/>
+  <text x="746" y="386" font-size="10" font-weight="600" fill="#94a3b8" letter-spacing="0.4">WEIGHT DEDUCT</text>
+  <text x="746" y="416" font-size="18" font-weight="700" fill="#f1f5f9">24.00</text>
+  <text x="808" y="416" font-size="12" fill="#94a3b8">kg</text>
+
+  <!-- SECTION : TAGS -->
+  <text x="480" y="466" font-size="10.5" font-weight="700" fill="#475569" letter-spacing="1.2">TAGS</text>
+
+  <rect x="480" y="478" width="64" height="26" rx="13" fill="#1e3a8a"/>
+  <text x="512" y="495" font-size="11" fill="#93c5fd" text-anchor="middle">coffee</text>
+  <rect x="552" y="478" width="48" height="26" rx="13" fill="#1e3a8a"/>
+  <text x="576" y="495" font-size="11" fill="#93c5fd" text-anchor="middle">raw</text>
+
+  <!-- SECTION : DESCRIPTION -->
+  <text x="480" y="534" font-size="10.5" font-weight="700" fill="#475569" letter-spacing="1.2">DESCRIPTION</text>
+  <text x="480" y="556" font-size="12" fill="#cbd5e1">Dark roast beans sourced from single-origin farms,</text>
+  <text x="480" y="574" font-size="12" fill="#cbd5e1">ideal for espresso and milk-based drinks.</text>
+
+  <!-- SECTION : EXTRA INFO -->
+  <text x="480" y="606" font-size="10.5" font-weight="700" fill="#475569" letter-spacing="1.2">EXTRA INFO</text>
+  <text x="480" y="628" font-size="12" fill="#94a3b8">Store in cool, dry place. Use within 30 days of opening.</text>
+
+  <!-- SECTION : META -->
+  <text x="480" y="660" font-size="10.5" font-weight="700" fill="#475569" letter-spacing="1.2">META</text>
+
+  <text x="480" y="682" font-size="11" fill="#94a3b8">Created</text>
+  <text x="960" y="682" font-size="11" fill="#cbd5e1" text-anchor="end">Feb 20, 2025</text>
+
+  <text x="480" y="702" font-size="11" fill="#94a3b8">Last updated</text>
+  <text x="960" y="702" font-size="11" fill="#cbd5e1" text-anchor="end">Feb 20, 2025</text>
+
+  <!-- FOOTER -->
+  <line x1="440" y1="734" x2="1000" y2="734" stroke="#1e293b" stroke-width="1"/>
+
+  <rect x="844" y="752" width="120" height="38" rx="10" fill="#1e293b" stroke="#334155"/>
+  <text x="904" y="776" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="middle">Close</text>
+</svg>

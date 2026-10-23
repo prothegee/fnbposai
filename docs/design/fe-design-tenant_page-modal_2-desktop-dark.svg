@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <style>text { font-family: 'Inter','Segoe UI',system-ui,-apple-system,sans-serif; }</style>
+    <filter id="modalShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="40" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <clipPath id="previewAvatarClip"><circle cx="534" cy="654" r="14"/></clipPath>
+  </defs>
+
+  <!-- Dim backdrop -->
+  <rect x="0" y="0" width="1440" height="900" fill="#020617" opacity="0.7"/>
+
+  <!-- Modal -->
+  <rect x="470" y="140" width="500" height="646" rx="16" fill="#111827" filter="url(#modalShadow)"/>
+
+  <!-- Header -->
+  <circle cx="514" cy="178" r="16" fill="#172554"/>
+  <circle cx="508" cy="174" r="3" fill="#60a5fa"/>
+  <circle cx="514" cy="172" r="4" fill="#60a5fa"/>
+  <path d="M504 182 Q514 180 524 182 L524 186 L504 186 Z" fill="#60a5fa"/>
+  <text x="546" y="176" font-size="17" font-weight="700" fill="#f1f5f9">Invite Member</text>
+  <text x="546" y="196" font-size="11.5" fill="#94a3b8">Add a teammate to the Downtown Branch.</text>
+  <circle cx="940" cy="176" r="12" fill="#1e293b" stroke="#334155"/>
+  <text x="940" y="180" font-size="11" fill="#94a3b8" text-anchor="middle">✕</text>
+
+  <line x1="470" y1="220" x2="970" y2="220" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Username -->
+  <text x="510" y="254" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="0.4">USERNAME <tspan fill="#f87171">*</tspan></text>
+  <rect x="510" y="262" width="420" height="46" rx="10" fill="#0b1220" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="530" y="273" font-size="10" font-weight="600" fill="#60a5fa" letter-spacing="0.3">USERNAME</text>
+  <text x="530" y="293" font-size="13.5" fill="#f1f5f9">sarah.m</text>
+  <circle cx="906" cy="285" r="9" fill="#052e16"/>
+  <path d="M902 285 L905 288 L910 282" fill="none" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="510" y="322" font-size="10" fill="#64748b">User must already have an account. They'll get an invite notification.</text>
+
+  <!-- Role + Position -->
+  <text x="510" y="360" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="0.4">ROLE <tspan fill="#f87171">*</tspan></text>
+  <rect x="510" y="368" width="200" height="44" rx="10" fill="#0b1220" stroke="#334155"/>
+  <text x="530" y="395" font-size="13" fill="#f1f5f9">Branch Admin</text>
+  <text x="694" y="395" font-size="11" fill="#64748b">▾</text>
+
+  <text x="730" y="360" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="0.4">POSITION</text>
+  <rect x="730" y="368" width="200" height="44" rx="10" fill="#0b1220" stroke="#334155"/>
+  <text x="750" y="395" font-size="13" fill="#f1f5f9">Supervisor</text>
+
+  <!-- App Access -->
+  <text x="510" y="442" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="0.4">APP ACCESS</text>
+  <text x="590" y="442" font-size="9.5" fill="#64748b">· only owners &amp; admins can grant</text>
+
+  <!-- Row 1 : Items / Orders / Stocks / Monitor Kitchen & Bar -->
+  <rect x="510" y="454" width="18" height="18" rx="4" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M514 463 L517 466 L524 458" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="536" y="468" font-size="12" fill="#cbd5e1">Items</text>
+
+  <rect x="600" y="454" width="18" height="18" rx="4" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M604 463 L607 466 L614 458" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="626" y="468" font-size="12" fill="#cbd5e1">Orders</text>
+
+  <rect x="700" y="454" width="18" height="18" rx="4" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M704 463 L707 466 L714 458" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="726" y="468" font-size="12" fill="#cbd5e1">Stocks</text>
+
+  <!-- Monitor Kitchen & Bar -->
+  <rect x="790" y="454" width="18" height="18" rx="4" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M794 463 L797 466 L804 458" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="816" y="464" font-size="11.5" fill="#cbd5e1">Monitor Kitchen</text>
+  <text x="816" y="476" font-size="11.5" fill="#cbd5e1">&amp; Bar</text>
+
+  <!-- Row 2 : Sales / Tenant -->
+  <rect x="510" y="484" width="18" height="18" rx="4" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M514 493 L517 496 L524 488" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="536" y="498" font-size="12" fill="#cbd5e1">Sales</text>
+
+  <rect x="600" y="484" width="18" height="18" rx="4" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M604 493 L607 496 L614 488" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="626" y="498" font-size="12" fill="#cbd5e1">Tenant</text>
+
+  <!-- Info banner -->
+  <rect x="510" y="524" width="420" height="56" rx="10" fill="#172554" stroke="#1e40af"/>
+  <circle cx="532" cy="552" r="9" fill="#3b82f6"/>
+  <text x="532" y="556" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">i</text>
+  <text x="550" y="548" font-size="11" font-weight="600" fill="#93c5fd">Access is role-based</text>
+  <text x="550" y="564" font-size="10" fill="#93c5fd" opacity="0.85">You can adjust app access and position after the invite is sent.</text>
+
+  <!-- Preview -->
+  <text x="510" y="608" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="0.4">PREVIEW</text>
+
+  <rect x="510" y="618" width="420" height="56" rx="10" fill="#0f172a" stroke="#1e293b"/>
+  <circle cx="534" cy="654" r="14" fill="#1e293b"/>
+  <g clip-path="url(#previewAvatarClip)">
+    <circle cx="534" cy="648" r="5" fill="#64748b"/>
+    <ellipse cx="534" cy="666" rx="10" ry="9" fill="#64748b"/>
+  </g>
+
+  <text x="558" y="642" font-size="12.5" font-weight="600" fill="#f1f5f9">sarah.m</text>
+  <text x="558" y="658" font-size="10.5" fill="#94a3b8">Branch Admin · Supervisor</text>
+
+  <rect x="806" y="642" width="104" height="22" rx="11" fill="#172554"/>
+  <text x="858" y="657" font-size="10.5" font-weight="600" fill="#60a5fa" text-anchor="middle">Branch Admin</text>
+
+  <line x1="470" y1="700" x2="970" y2="700" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Buttons -->
+  <rect x="690" y="722" width="110" height="42" rx="10" fill="#1e293b" stroke="#334155"/>
+  <text x="745" y="748" font-size="13" font-weight="600" fill="#e2e8f0" text-anchor="middle">Cancel</text>
+
+  <rect x="812" y="722" width="118" height="42" rx="10" fill="#3b82f6"/>
+  <text x="871" y="748" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Send Invite</text>
+</svg>

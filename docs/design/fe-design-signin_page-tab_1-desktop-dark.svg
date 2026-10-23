@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <style>
+      text { font-family: 'Inter','Segoe UI',system-ui,-apple-system,sans-serif; }
+    </style>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="24" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="snackShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c1e4a"/>
+      <stop offset="55%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="orbGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="brandClip">
+      <path d="M 330 140 L 690 140 L 690 800 L 330 800 A 20 20 0 0 1 310 780 L 310 160 A 20 20 0 0 1 330 140 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect x="0" y="0" width="1440" height="900" fill="#0b1220"/>
+  <circle cx="140" cy="160" r="220" fill="#172554" opacity="0.45"/>
+  <circle cx="1330" cy="760" r="240" fill="#1e1b4b" opacity="0.5"/>
+  <circle cx="1350" cy="120" r="160" fill="#0c1e4a" opacity="0.5"/>
+
+  <!-- SNACKBAR -->
+  <g filter="url(#snackShadow)">
+    <rect x="530" y="24" width="380" height="44" rx="22" fill="#1e293b" stroke="#334155"/>
+  </g>
+  <circle cx="558" cy="46" r="11" fill="#22c55e"/>
+  <path d="M553 46 L557 50 L564 42" fill="none" stroke="#0b1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="580" y="51" font-size="12.5" font-weight="500" fill="#f1f5f9">Signed out successfully. Please sign in again.</text>
+
+  <!-- SIGN-IN CARD -->
+  <rect x="310" y="140" width="820" height="660" rx="20" fill="#111827" filter="url(#cardShadow)" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- BRAND PANEL (flush, left corners rounded) -->
+  <g clip-path="url(#brandClip)">
+    <rect x="310" y="140" width="380" height="660" fill="url(#brandGrad)"/>
+    <circle cx="500" cy="220" r="150" fill="url(#orbGrad)"/>
+    <circle cx="580" cy="680" r="120" fill="url(#orbGrad)"/>
+    <circle cx="360" cy="740" r="90" fill="url(#orbGrad)"/>
+  </g>
+
+  <!-- Chip -->
+  <rect x="346" y="180" width="120" height="26" rx="13" fill="#ffffff" opacity="0.12"/>
+  <text x="406" y="198" font-size="10.5" font-weight="600" fill="#e0e7ff" text-anchor="middle" letter-spacing="0.6">FNB POS</text>
+
+  <!-- Headline -->
+  <text x="346" y="286" font-size="28" font-weight="700" fill="#ffffff">Run your café,</text>
+  <text x="346" y="320" font-size="28" font-weight="700" fill="#ffffff">without the hassle.</text>
+
+  <!-- Subtext -->
+  <text x="346" y="352" font-size="12.5" fill="#c7d7f5" opacity="0.92">One dashboard for orders, stocks, sales,</text>
+  <text x="346" y="370" font-size="12.5" fill="#c7d7f5" opacity="0.92">and your whole team.</text>
+
+  <!-- Bullets -->
+  <circle cx="354" cy="420" r="10" fill="#ffffff" opacity="0.14"/>
+  <path d="M349 420 L353 424 L359 416" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="374" y="424" font-size="12.5" fill="#e2e8f0">Real-time order monitoring</text>
+
+  <circle cx="354" cy="454" r="10" fill="#ffffff" opacity="0.14"/>
+  <path d="M349 454 L353 458 L359 450" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="374" y="458" font-size="12.5" fill="#e2e8f0">Auto stock deduction</text>
+
+  <circle cx="354" cy="488" r="10" fill="#ffffff" opacity="0.14"/>
+  <path d="M349 488 L353 492 L359 484" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="374" y="492" font-size="12.5" fill="#e2e8f0">Sales insights &amp; reports</text>
+
+  <!-- Mini illustration -->
+  <rect x="346" y="536" width="300" height="140" rx="14" fill="#ffffff" opacity="0.08"/>
+  <rect x="346" y="536" width="300" height="140" rx="14" fill="none" stroke="#ffffff" opacity="0.16"/>
+  <rect x="366" y="562" width="80" height="8" rx="4" fill="#ffffff" opacity="0.5"/>
+  <rect x="366" y="580" width="180" height="8" rx="4" fill="#ffffff" opacity="0.3"/>
+  <rect x="366" y="598" width="140" height="8" rx="4" fill="#ffffff" opacity="0.3"/>
+  <rect x="366" y="624" width="100" height="26" rx="6" fill="#ffffff" opacity="0.22"/>
+  <rect x="480" y="624" width="60" height="26" rx="6" fill="#ffffff" opacity="0.14"/>
+  <circle cx="600" cy="590" r="22" fill="none" stroke="#ffffff" opacity="0.35" stroke-width="3"/>
+  <path d="M586 590 L596 600 L616 578" fill="none" stroke="#ffffff" opacity="0.8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Caption -->
+  <text x="346" y="746" font-size="10.5" fill="#c7d7f5" opacity="0.7">Used by 200+ independent cafés</text>
+
+  <!-- RIGHT PANEL -->
+  <rect x="728" y="180" width="48" height="48" rx="12" fill="#172554" stroke="#1e40af"/>
+  <circle cx="752" cy="204" r="9" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M747 204 L751 208 L758 200" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="728" y="260" font-size="22" font-weight="700" fill="#f1f5f9">Welcome back</text>
+  <text x="728" y="284" font-size="12.5" fill="#94a3b8">Sign in to your account to continue</text>
+
+  <!-- EMAIL -->
+  <rect x="728" y="320" width="360" height="54" rx="10" fill="#0b1220" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="748" y="341" font-size="10.5" font-weight="600" fill="#60a5fa" letter-spacing="0.4">EMAIL ADDRESS</text>
+  <text x="748" y="361" font-size="13.5" fill="#f1f5f9">j.doe@sunrisecafe.id</text>
+
+  <!-- PASSWORD -->
+  <rect x="728" y="388" width="360" height="54" rx="10" fill="#0b1220" stroke="#334155"/>
+  <text x="748" y="409" font-size="10.5" font-weight="600" fill="#94a3b8" letter-spacing="0.4">PASSWORD</text>
+  <text x="748" y="429" font-size="13.5" fill="#f1f5f9">••••••••••••</text>
+  <circle cx="1056" cy="415" r="14" fill="transparent"/>
+  <path d="M1048 415 Q1056 406 1064 415 Q1056 424 1048 415 Z" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="1056" cy="415" r="2.5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- REMEMBER / FORGOT -->
+  <rect x="728" y="458" width="16" height="16" rx="4" fill="#0f172a" stroke="#334155"/>
+  <text x="754" y="471" font-size="12" fill="#cbd5e1">Remember me</text>
+  <text x="1088" y="471" font-size="12" font-weight="600" fill="#60a5fa" text-anchor="end">Forgot password?</text>
+
+  <!-- SIGN IN -->
+  <rect x="728" y="492" width="360" height="46" rx="10" fill="#3b82f6"/>
+  <text x="908" y="520" font-size="13.5" font-weight="600" fill="#ffffff" text-anchor="middle">Sign In</text>
+
+  <!-- DIVIDER -->
+  <line x1="728" y1="572" x2="880" y2="572" stroke="#1e293b" stroke-width="1"/>
+  <text x="908" y="576" font-size="10.5" font-weight="600" fill="#64748b" text-anchor="middle">OR</text>
+  <line x1="936" y1="572" x2="1088" y2="572" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- SIGN UP LINK -->
+  <text x="908" y="610" font-size="12.5" fill="#94a3b8" text-anchor="middle">
+    Don't have an account? <tspan font-weight="600" fill="#60a5fa">Sign Up</tspan>
+  </text>
+
+  <!-- REGISTER AS TENANT -->
+  <rect x="788" y="628" width="240" height="36" rx="9" fill="#1e293b" stroke="#334155"/>
+  <text x="898" y="651" font-size="12" font-weight="600" fill="#e2e8f0" text-anchor="middle">Register as Tenant</text>
+  <path d="M1012 646 L1018 646 M1015 642 L1019 646 L1015 650" fill="none" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- FOOTER -->
+  <text x="908" y="682" font-size="10.5" fill="#64748b" text-anchor="middle">By signing in, you agree to our Terms of Service and Privacy Policy.</text>
+</svg>
